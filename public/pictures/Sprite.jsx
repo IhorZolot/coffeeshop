@@ -12,12 +12,8 @@ export const Sprite = ({ name }) => {
 			)
 		case 'windows-close':
 			return (
-				<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'>
-					<path
-						d='M1 1C17.3429 17.3429 15.1429 15.1429 12 12M12 12L1 23M12 12L23 23M12 12L17.5 6.5L23 1'
-						stroke='#141414'
-						strokeWidth='2'
-					/>
+				<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='none'>
+					<path d='m1 1 11 11m0 0L1 23m11-11 11 11M12 12l5.5-5.5L23 1' stroke='#141414' stroke-width='2' />
 				</svg>
 			)
 		case 'icon-telegram':
