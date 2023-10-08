@@ -1,5 +1,10 @@
 import './App.css'
 import { AboutUs } from './components/AboutUs/AboutUs'
+import { Americano } from './components/CoffeeCards/Americano'
+import { Cappuccino } from './components/CoffeeCards/Cappuccino'
+import { Espresso } from './components/CoffeeCards/Espresso'
+import { Latte } from './components/CoffeeCards/Latte'
+import { Contacts } from './components/Contacts/Contacts'
 import { Header } from './components/Header/Header'
 import { Home } from './components/Home/Home'
 import { Promotion } from './components/Promotion/Promotion'
@@ -12,6 +17,11 @@ export default function App() {
 			<Home />
 			<AboutUs />
 			<Promotion />
+			<Espresso />
+			<Latte />
+			<Americano />
+			<Cappuccino />
+			<Contacts />
 
 			{/* <Section
 				$reverse
