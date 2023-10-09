@@ -1,8 +1,9 @@
 import React from 'react'
-import { Sprite } from '../../../public/pictures/Sprite'
-import { StyledHeader, StyledHeaderBurger, StyledHeaderLogo } from './Header.styled'
+import { Sprite } from '/public/pictures/Sprite'
+import { StyledHeader, StyledHeaderBurger, StyledHeaderButton, StyledHeaderLogo, StyledHeaderUl } from './Header.styled'
 
 export const Header = () => {
+	const links = ['About us', 'Promotion', 'Shop', 'Contacts']
 	return (
 		<StyledHeader>
 			<StyledHeaderBurger>
@@ -11,6 +12,12 @@ export const Header = () => {
 			<StyledHeaderLogo>
 				<img src='/pictures/logo-cafe.svg' alt='Cafe Logo' />
 			</StyledHeaderLogo>
+			<StyledHeaderUl>
+				{links.map(item => (
+					<li key={item}>{item}</li>
+				))}
+			</StyledHeaderUl>
+			<StyledHeaderButton>Contact Us</StyledHeaderButton>
 		</StyledHeader>
 	)
 }

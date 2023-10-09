@@ -1,5 +1,13 @@
 import styled from 'styled-components'
 
+export const StyledCoffeeSection = styled.section`
+@media screen and (min-width: 1280px) {
+display: flex;
+flex-direction: row;
+gap: 15px;
+}
+`
+
 export const StyledCoffeeCard = styled.div`
 	display: flex;
 	flex-direction: column;

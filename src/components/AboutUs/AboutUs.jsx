@@ -1,12 +1,14 @@
 import React from 'react'
-import { StyledAboutUs, StyledImgUs, StyledTextUs, StyledTitleUs } from './AboutUs.styled'
+import { StyledAboutUs, StyledImgUs, StyledSpanAbout, StyledTextBoxAbout, StyledTextUs, StyledTitleUs } from './AboutUs.styled'
 
 export const AboutUs = () => {
 	return (
 		<StyledAboutUs>
+			<StyledSpanAbout>About us</StyledSpanAbout>
 			<StyledImgUs>
 				<img src='/public/pictures/coffee-cup.svg' />
 			</StyledImgUs>
+			<StyledTextBoxAbout>
 			<StyledTitleUs>Coffee Shop Samwayle</StyledTitleUs>
 			<StyledTextUs>
 				Only one moment - when the barista reaches out over the bar to transfer the cup to the outstretched hand of the
@@ -17,6 +19,8 @@ export const AboutUs = () => {
 				quality coffee in the world and ending with how we interact with guests and organizations to fulfill our
 				obligations.
 			</StyledTextUs>
+			</StyledTextBoxAbout>
+			
 		</StyledAboutUs>
 	)
 }

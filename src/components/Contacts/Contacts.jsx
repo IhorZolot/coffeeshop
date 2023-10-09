@@ -6,12 +6,16 @@ import {
 	StyledAddressTitle,
 	StyledContacts,
 	StyledMap,
+	StyledSpanContacts,
 } from './Contacts.styled'
 
 export const Contacts = () => {
 	return (
 		<StyledContacts>
-			<StyledMap>MAP</StyledMap>
+			<StyledSpanContacts>Contacts</StyledSpanContacts>
+			<StyledMap>
+				<img src={'/public/pictures/snazzy-image (1) 1.png'} />
+			</StyledMap>
 			<StyledAddress>
 				<StyledAddressTitle>Our address</StyledAddressTitle>
 				<StyledAddressText>110 St-Cathedral Pkwy Station</StyledAddressText>

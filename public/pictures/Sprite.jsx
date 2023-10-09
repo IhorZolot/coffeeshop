@@ -13,8 +13,14 @@ export const Sprite = ({ name }) => {
 		case 'windows-close':
 			return (
 				<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='none'>
-					<path d='m1 1 11 11m0 0L1 23m11-11 11 11M12 12l5.5-5.5L23 1' stroke='#141414' stroke-width='2' />
+					<path d='m1 1 11 11m0 0L1 23m11-11 11 11M12 12l5.5-5.5L23 1' stroke='#141414' strokeWidth='2' />
 				</svg>
+			)
+		case 'decor-line':
+			return (
+				<svg xmlns="http://www.w3.org/2000/svg" width="28" height="8" viewBox="0 0 28 8" fill="none">
+  <path d="M1 4H26M26 4C26 4 24.1716 2.17157 23 1M26 4L23 7" stroke="black" strokeWidth="1.7" strokeLinecap="round"/>
+</svg>
 			)
 		case 'icon-telegram':
 			return (
