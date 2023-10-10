@@ -3,9 +3,9 @@ import { Latte } from './Latte'
 import { Espresso } from './Espresso'
 import { Americano } from './Americano'
 import { Cappuccino } from './Cappuccino'
-import { StyledCoffeeSection } from './CoffeeCard.styled'
+import { StyledCoffeeSection } from './CoffeeShops.styled'
 
-export const CoffeeCards = () => {
+export const CoffeeShops = () => {
   return (
     <StyledCoffeeSection>
       <Espresso />

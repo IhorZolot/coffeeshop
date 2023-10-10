@@ -1,5 +1,6 @@
 import React from 'react'
-import { StyledButtonCard, StyledCoffeeCard, StyledTextCard, StyledTitleCard } from './CoffeeCard.styled'
+import { StyledButtonCard, StyledCoffeeCard, StyledTextCard, StyledTitleCard } from './CoffeeShops.styled'
+import { Button } from '../Button/Button'
 
 export const Espresso = () => {
 	return (
@@ -9,7 +10,7 @@ export const Espresso = () => {
 				Espresso - black coffee made in a coffee machine or a special coffee machine, where hot water is passed through
 				pressed ground beans at a pressure.
 			</StyledTextCard>
-			<StyledButtonCard>Add to cart</StyledButtonCard>
+			<Button>Add to cart</Button>
 		</StyledCoffeeCard>
 	)
 }

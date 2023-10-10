@@ -1,5 +1,6 @@
 import React from 'react'
-import { StyledButtonCard, StyledCoffeeCard, StyledTextCard, StyledTitleCard } from './CoffeeCard.styled'
+import { StyledButtonCard, StyledCoffeeCard, StyledTextCard, StyledTitleCard } from './CoffeeShops.styled'
+import { Button } from '../Button/Button'
 
 export const Latte = () => {
 	return (
@@ -9,7 +10,7 @@ export const Latte = () => {
 				The name Latte (from Italian “milk”) speaks about the main ingredient of the drink. It is recommended to take
 				fat milk - at least 3.2%. In addition to it, milk foam.
 			</StyledTextCard>
-			<StyledButtonCard>Add to cart</StyledButtonCard>
+			<Button>Add to cart</Button>
 		</StyledCoffeeCard>
 	)
 }

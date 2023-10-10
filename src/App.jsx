@@ -1,6 +1,6 @@
 import './App.css'
 import { AboutUs } from './components/AboutUs/AboutUs'
-import { CoffeeCards } from './components/CoffeeCards/CoffeeCards'
+import { CoffeeShops } from './components/CoffeeShops/CoffeeShops'
 import { Contacts } from './components/Contacts/Contacts'
 import { Header } from './components/Header/Header'
 import { Home } from './components/Home/Home'
@@ -13,7 +13,7 @@ export default function App() {
 			<Home />
 			<AboutUs />
 			<Promotion />
-			<CoffeeCards />
+			<CoffeeShops />
 			<Contacts />
 			{/* <MobileMenu /> */}
 		</>

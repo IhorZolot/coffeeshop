@@ -27,8 +27,8 @@ export const StyledLinkMenu = styled.ul`
 	display: flex;
 	flex-direction: column;
 	gap: 70px;
-	color: #000;
-	font-family: Josefin Sans;
+	color: ${({ theme }) => theme.colors.black};
+	font-family: ${({ theme }) => theme.fonts.josefine};
 	font-size: 36px;
 	font-style: normal;
 `

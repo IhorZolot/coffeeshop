@@ -16,21 +16,25 @@ export const StyledHome = styled.section`
 `
 export const StyledFirstHome = styled.div``
 export const StyledTitleH3 = styled.h3`
-	color: #000;
+	color: ${({ theme }) => theme.colors.gray};
 	text-align: center;
-	font-family: Cedarville Cursive;
+	font-family: ${({ theme }) => theme.fonts.cedarville};
 	font-size: 19px;
 	font-style: normal;
 	margin-bottom: 12px;
+	@media screen and (min-width: 1280px) {
+		font-size: 28px;
+	}
 `
-export const StyledTitleH1 = styled.h3`
-	color: #000;
+export const StyledTitleH1 = styled.h1`
+	color: ${({ theme }) => theme.colors.black};
+	font-family: ${({ theme }) => theme.fonts.josefine};
 	text-align: center;
-	font-family: Josefin Sans;
 	font-size: 54px;
 	margin-bottom: 30px;
 	@media screen and (min-width: 1280px) {
 		text-align: left;
+		font-size: 63px;
 	}
 `
 export const StyledButtonHome = styled.button`
@@ -54,10 +58,11 @@ export const StyledDecorLine = styled.div`
 export const StyledBoxGrinder = styled.div`
 	width: 410px;
 	height: 466px;
-	background: #e3ebe7;
+	background: #a6cac3;
 	img {
 		transform: translate(60px, 160px);
 		width: 80%;
+		stroke: #444a4a;
 	}
 	margin-right: 40px;
 `
@@ -73,7 +78,9 @@ export const StyledSocialIcon = styled.div`
 	height: 32px;
 `
 export const StyledSpanText = styled.span`
-	font-family: Josefin Sans;
+	font-size: 28px;
+	color: ${({ theme }) => theme.colors.black};
+	font-family: ${({ theme }) => theme.fonts.josefine};
 	writing-mode: vertical-rl;
 	transform: rotate(180deg);
 `

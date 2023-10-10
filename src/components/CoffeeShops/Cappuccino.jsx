@@ -1,5 +1,6 @@
 import React from 'react'
-import { StyledButtonCard, StyledCoffeeCard, StyledTextCard, StyledTitleCard } from './CoffeeCard.styled'
+import { StyledButtonCard, StyledCoffeeCard, StyledTextCard, StyledTitleCard } from './CoffeeShops.styled'
+import { Button } from '../Button/Button'
 
 export const Cappuccino = () => {
 	return (
@@ -9,7 +10,7 @@ export const Cappuccino = () => {
 				Cappuccino is coffee which is made using milk and has froth and sometimes powdered chocolate on top. A
 				cappuccino is a cup of cappuccino.
 			</StyledTextCard>
-			<StyledButtonCard>Add to cart</StyledButtonCard>
+			<Button>Add to cart</Button>
 		</StyledCoffeeCard>
 	)
 }

@@ -1,5 +1,6 @@
 import React from 'react'
 import { StyledPromotion, StyledImgPromotion, StyledTextPromotion, StyledTitlePromotion, StyledSpanPromotion, StyledButtonPromotion, StyledTextBoxPromotion } from './Promotion.styled'
+import { Button } from '../Button/Button'
 
 export const Promotion = () => {
 	return (
@@ -16,7 +17,7 @@ export const Promotion = () => {
 				not be confused. n the second case, this refers not to diluted espresso, but to a drink prepared through a
 				filter system.
 			</StyledTextPromotion>
-			<StyledButtonPromotion>Order now</StyledButtonPromotion>
+			<Button>Order now</Button>
 			</StyledTextBoxPromotion>
 		</StyledPromotion>
 	)
