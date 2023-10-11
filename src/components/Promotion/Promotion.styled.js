@@ -11,6 +11,7 @@ export const StyledPromotion = styled.section`
 		flex-direction: row;
 		justify-content: space-between;
 		margin-bottom: 60px;
+		flex-direction: ${props => (props.$reverse ? 'row-reverse' : 'row')};
 	}
 `
 export const StyledSpanPromotion = styled.span`
@@ -23,7 +24,8 @@ export const StyledSpanPromotion = styled.span`
 		transform: rotate(180deg);
 		position: absolute;
 		color: ${({ theme }) => theme.colors.black};
-		top: -10px;
+		top: -30px;
+		right: -13px;
 	}
 `
 export const StyledImgPromotion = styled.div`
@@ -37,7 +39,7 @@ export const StyledImgPromotion = styled.div`
 	@media screen and (min-width: 1280px) {
 		width: 40%;
 		img {
-			transform: translate(130px, -30px);
+			transform: translate(110px, -30px);
 			width: 50%;
 		}
 	}
@@ -46,14 +48,12 @@ export const StyledTextBoxPromotion = styled.div`
 	@media screen and (min-width: 1280px) {
 		flex-direction: column;
 		width: 50%;
-		padding-left: 100px;
 	}
 `
 export const StyledTitlePromotion = styled.h2`
 	font-family: ${({ theme }) => theme.fonts.josefine};
 	color: ${({ theme }) => theme.colors.black};
 	font-size: 38px;
-	margin-left: 32px;
 	margin-bottom: 25px;
 	text-align: left;
 `
@@ -62,7 +62,6 @@ export const StyledTextPromotion = styled.p`
 	color: ${({ theme }) => theme.colors.gray};
 	font-size: 19px;
 	width: 313px;
-	margin-left: 32px;
 	margin-bottom: 25px;
 	text-align: left;
 	line-height: 36px;
@@ -74,5 +73,6 @@ export const StyledButtonPromotion = styled.button`
 	display: none;
 	@media screen and (min-width: 1280px) {
 		display: block;
+		align-items: center;
 	}
 `

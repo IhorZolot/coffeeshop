@@ -22,11 +22,12 @@ export const StyledSpanAbout = styled.span`
 		transform: rotate(180deg);
 		position: absolute;
 		color: ${({ theme }) => theme.colors.black};
-		top: -10px;
+		top: -30px;
+		left: -8px;
 	}
 `
 export const StyledImgUs = styled.div`
-	background-color: #fae9e0;
+	background-color: ${({ theme }) => theme.colors.creamy};
 	img {
 		transform: translate(18px, -24px);
 		width: 91%;

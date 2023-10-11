@@ -3,11 +3,13 @@ import styled from 'styled-components'
 export const StyledCoffeeSection = styled.section`
 	@media screen and (min-width: 1280px) {
 		background-color: ${({ theme }) => theme.colors.ligthGreen};
-		display: flex;
+		/* display: flex; */
 		flex-direction: row;
-		gap: 15px;
+		/* gap: 15px; */
 		padding: 44px 0;
 		margin-bottom: 130px;
+		/* align-items: center;
+		justify-content: center; */
 	}
 `
 

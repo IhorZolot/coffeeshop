@@ -10,4 +10,12 @@ export const StyledButton = styled.button`
 	background-color: #2d635e;
 	border-radius: 8px;
 	color: white;
+	cursor: pointer;
+	&:hover {
+		background-color: #1a403d;
+	}
+	&:focus {
+		outline: none;
+		box-shadow: 0 0 4px 2px #00f;
+	}
 `
