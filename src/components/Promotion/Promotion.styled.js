@@ -7,7 +7,6 @@ export const StyledPromotion = styled.section`
 	margin-bottom: 60px;
 	@media screen and (min-width: 1280px) {
 		flex-direction: ${props => (props.$reverse ? 'row-reverse' : 'row')};
-		flex-direction: row;
 		justify-content: space-between;
 		margin-bottom: 100px;
 	}
