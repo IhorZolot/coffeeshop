@@ -8,24 +8,22 @@ export const Modal = ({ children, onClose }) => {
 		}
 	}
 
-	// useEffect(() => {
-	// 	const handleKeyDown = event => {
-	// 		if (event.key === 'Escape') {
-	// 			onClose()
-	// 		}
-	// 	}
-	// 	document.addEventListener('keydown', handleKeyDown)
-	// 	return () => {
-	// 		document.removeEventListener('keydown', handleKeyDown)
-	// 	}
-	// }, [onClose])
+	useEffect(() => {
+		const handleKeyDown = event => {
+			if (event.key === 'Escape') {
+				onClose()
+			}
+		}
+		document.addEventListener('keydown', handleKeyDown)
+		return () => {
+			document.removeEventListener('keydown', handleKeyDown)
+		}
+	}, [onClose])
 
 	return (
 		<BackgroundModal onClick={onBackdropClick}>
 			<ContentModal>
-				<OptionModalMenu>
-					<button onClick={onClose}>X</button>
-				</OptionModalMenu>
+				<button onClick={onClose}>X</button>
 				{children}
 			</ContentModal>
 		</BackgroundModal>

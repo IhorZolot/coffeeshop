@@ -2,11 +2,10 @@ import { Sprite } from '/public/pictures/Sprite'
 import {
 	StyledBoxGrinder,
 	StyledBoxSocial,
-	StyledButtonHome,
 	StyledDecorLine,
-	StyledFirstHome,
 	StyledHome,
-	StyledSecondHome,
+	StyledLeftSide,
+	StyledRightSide,
 	StyledSocialIcon,
 	StyledSpanText,
 	StyledTitleH1,
@@ -17,12 +16,12 @@ import { Button } from '../Button/Button'
 export const Home = () => {
 	return (
 		<StyledHome>
-			<StyledFirstHome>
+			<StyledLeftSide>
 				<StyledTitleH3>Drink coffee, enjoy with Samwyle</StyledTitleH3>
 				<StyledTitleH1>Coffee Shop</StyledTitleH1>
 				<Button>Menu</Button>
-			</StyledFirstHome>
-			<StyledSecondHome>
+			</StyledLeftSide>
+			<StyledRightSide>
 				<StyledDecorLine>
 					<Sprite name={'decor-line'} />
 				</StyledDecorLine>
@@ -41,7 +40,7 @@ export const Home = () => {
 					</StyledSocialIcon>
 					<StyledSpanText>Follow us</StyledSpanText>
 				</StyledBoxSocial>
-			</StyledSecondHome>
+			</StyledRightSide>
 		</StyledHome>
 	)
 }

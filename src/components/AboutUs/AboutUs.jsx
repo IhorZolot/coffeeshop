@@ -10,7 +10,7 @@ import {
 
 export const AboutUs = ({ $reverse }) => {
 	return (
-		<StyledAboutUs $reverse={$reverse}>
+		<StyledAboutUs id='About us' $reverse={$reverse}>
 			<StyledSpanAbout>About us</StyledSpanAbout>
 			<StyledImgUs>
 				<img src='/public/pictures/coffee-cup.svg' />

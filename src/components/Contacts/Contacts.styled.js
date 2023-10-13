@@ -8,8 +8,6 @@ export const StyledContacts = styled.section`
 	@media screen and (min-width: 1280px) {
 		display: flex;
 		flex-direction: row;
-		align-items: center;
-		justify-content: center;
 	}
 `
 export const StyledSpanContacts = styled.span`
@@ -22,25 +20,25 @@ export const StyledSpanContacts = styled.span`
 		writing-mode: vertical-rl;
 		transform: rotate(180deg);
 		position: absolute;
-		left: 315px;
+		left: 618px;
+		top: -25px;
 	}
 `
 export const StyledMap = styled.div`
-	width: 337px;
-
-	/* height: 300px; */
 	margin-bottom: 30px;
 	@media screen and (min-width: 1280px) {
-		width: 637px;
+		& iframe {
+			width: 646px;
+			height: 351px;
+		}
 		margin-right: 176px;
 	}
 `
 export const StyledAddress = styled.div`
 	display: flex;
 	flex-direction: column;
-
 	@media screen and (min-width: 1280px) {
-		padding-left: 100px;
+		margin-top: 40px;
 	}
 `
 export const StyledAddressTitle = styled.h3`
@@ -64,8 +62,11 @@ export const StyledAddressText = styled.span`
 export const StyledAddressButton = styled.button`
 	width: 189px;
 	height: 53px;
-	color: ${({ theme }) => theme.colors.white};
+	color: ${({ theme }) => theme.colors.black};
+	font-family: ${({ theme }) => theme.fonts.josefine};
 	align-self: center;
+	box-shadow: (0px 4px 10px rgba(0, 0, 0, 0.17));
+
 	@media screen and (min-width: 1280px) {
 		display: none;
 	}

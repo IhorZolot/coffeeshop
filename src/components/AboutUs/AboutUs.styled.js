@@ -3,13 +3,12 @@ import styled from 'styled-components'
 export const StyledAboutUs = styled.section`
 	display: flex;
 	flex-direction: column;
-	//width: 375px;
 	position: relative;
+	margin-bottom: 60px;
 	@media screen and (min-width: 1280px) {
-		//width: 1280px;
 		flex-direction: row;
 		justify-content: space-between;
-		margin-bottom: 110px;
+		margin-bottom: 160px;
 	}
 `
 export const StyledSpanAbout = styled.span`

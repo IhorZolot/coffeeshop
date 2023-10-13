@@ -3,6 +3,7 @@ import { Sprite } from '/public/pictures/Sprite'
 import { StyledHeader, StyledHeaderBurger, StyledHeaderButton, StyledHeaderLogo, StyledHeaderUl } from './Header.styled'
 
 export const Header = () => {
+	const phoneNumber = '+380730000000'
 	const links = ['About us', 'Promotion', 'Shop', 'Contacts']
 	return (
 		<StyledHeader>
@@ -10,7 +11,7 @@ export const Header = () => {
 				<Sprite name={'burger-menu'} />
 			</StyledHeaderBurger>
 			<StyledHeaderLogo>
-				<img src='/pictures/logo-cafe.svg' alt='Cafe Logo' />
+				<img src='/public/pictures/logoMova.svg' alt='Cafe Logo' />
 			</StyledHeaderLogo>
 			<StyledHeaderUl>
 				{links.map(item => (
@@ -18,36 +19,10 @@ export const Header = () => {
 						<a href={`/#${item}`}>{item}</a>
 					</li>
 				))}
-				<StyledHeaderButton>Contact Us</StyledHeaderButton>
+				<StyledHeaderButton>
+					<a href={`tel:${phoneNumber}`}>Contact Us</a>
+				</StyledHeaderButton>
 			</StyledHeaderUl>
 		</StyledHeader>
 	)
 }
-
-// import { Button } from '../Button'
-// import { StyledHeader, StyledUl } from './Header.styled'
-// import { AiOutlineArrowLeft, AiOutlineArrowRight } from 'react-icons/ai'
-// export const Header = () => {
-// 	const links = ['About us', 'Promotion', 'Shop', 'Contacts']
-// 	return (
-// 		<StyledHeader>
-// 			<h2>Logo</h2>
-// 			{/* <Button title='Contact us' />
-// 			<Button title='Order now' />
-// 			<Button title='Lets login' /> */}
-// 			<Button>
-// 				<AiOutlineArrowRight />
-// 			</Button>
-// 			<Button>
-// 				<AiOutlineArrowLeft />
-// 			</Button>
-
-// 			<StyledUl>
-// 				{links.map(item => (
-// 					<li key={item}>{item}</li>
-// 				))}
-// 			</StyledUl>
-// 			<button>Contact Us</button>
-// 		</StyledHeader>
-// 	)
-// }

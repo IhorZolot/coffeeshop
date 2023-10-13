@@ -6,7 +6,7 @@ export const CoffeCard = ({ title, desc, onClick }) => {
 	return (
 		<StyledCoffeeCard>
 			<StyledTitleCard>{title}</StyledTitleCard>
-			<StyledTextCard>{desc.slice(0, 155)}...</StyledTextCard>
+			<StyledTextCard>{desc.slice(0, 200)}...</StyledTextCard>
 			<Button onClick={onClick}>Add to cart</Button>
 		</StyledCoffeeCard>
 	)
