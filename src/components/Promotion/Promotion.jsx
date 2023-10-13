@@ -5,14 +5,13 @@ import {
 	StyledTextPromotion,
 	StyledTitlePromotion,
 	StyledSpanPromotion,
-	StyledButtonPromotion,
 	StyledTextBoxPromotion,
 } from './Promotion.styled'
 import { Button } from '../Button/Button'
 
-export const Promotion = () => {
+export const Promotion = ({ toggleModal }) => {
 	return (
-		<StyledPromotion $reverse>
+		<StyledPromotion id='Promotion' $reverse>
 			<StyledSpanPromotion>Promotion</StyledSpanPromotion>
 			<StyledImgPromotion>
 				<img src='/public/pictures/paper-cup.svg' />
@@ -25,7 +24,10 @@ export const Promotion = () => {
 					should not be confused. n the second case, this refers not to diluted espresso, but to a drink prepared
 					through a filter system.
 				</StyledTextPromotion>
-				<Button>Order now</Button>
+
+				<Button $hideable onClick={toggleModal}>
+					Order now
+				</Button>
 			</StyledTextBoxPromotion>
 		</StyledPromotion>
 	)

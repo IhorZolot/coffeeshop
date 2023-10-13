@@ -1,12 +1,12 @@
 import styled from 'styled-components'
 
 export const StyledHome = styled.section`
-	width: 375px;
+	/* //width: 375px; */
 	display: flex;
 	align-items: center;
 	flex-direction: column;
 	@media screen and (min-width: 1280px) {
-		width: 1280px;
+		//width: 1280px;
 		flex-direction: row;
 		justify-content: space-between;
 		padding-right: 120px;
@@ -44,6 +44,7 @@ export const StyledSecondHome = styled.div`
 	display: none;
 	@media screen and (min-width: 1280px) {
 		display: flex;
+		align-items: flex-end;
 	}
 `
 export const StyledDecorLine = styled.div`
@@ -70,7 +71,8 @@ export const StyledBoxSocial = styled.div`
 	display: flex;
 	gap: 14px;
 	flex-direction: column;
-	align-items: flex-end;
+	align-items: center;
+	justify-content: center;
 `
 
 export const StyledSocialIcon = styled.div`

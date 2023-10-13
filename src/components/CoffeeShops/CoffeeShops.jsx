@@ -1,7 +1,7 @@
 import React from 'react'
 import { Latte } from './Latte'
 import { Espresso } from './Espresso'
-import { Americano } from './Americano'
+import { CoffeCard } from './CoffeCard'
 import { Cappuccino } from './Cappuccino'
 import { StyledCoffeeSection } from './CoffeeShops.styled'
 import { Swiper, SwiperSlide } from 'swiper/react'
@@ -11,37 +11,55 @@ import 'swiper/css/navigation'
 
 import { Pagination, Navigation } from 'swiper/modules'
 import { Filter } from './Filter'
+import { Mocco } from './Mocco'
+import styled from 'styled-components'
+import { coffeeData } from '../../assets/coffeeData'
 
-export const CoffeeShops = () => {
+export const CoffeeShops = ({ toggleModal }) => {
 	return (
 		<StyledCoffeeSection>
-			<Swiper
+			<StyledSwiper
 				slidesPerView={3}
-				spaceBetween={10}
+				spaceBetween={45}
 				loop={true}
 				pagination={{
 					clickable: true,
 				}}
-				navigation={true}
+				navigation={false}
 				modules={[Pagination, Navigation]}
 				className='mySwiper'
 			>
-				<SwiperSlide>
+				<StyledSlide>
+					<CoffeCard onClick={toggleModal} title={coffeeData[1].title} desc={coffeeData[1].desc} />
+				</StyledSlide>
+				<StyledSlide>
 					<Espresso />
-				</SwiperSlide>
-				<SwiperSlide>
+				</StyledSlide>
+				<StyledSlide>
 					<Latte />
-				</SwiperSlide>
-				<SwiperSlide>
-					<Americano />
-				</SwiperSlide>
-				<SwiperSlide>
+				</StyledSlide>
+				<StyledSlide>
+					<CoffeCard title={coffeeData[0].title} desc={coffeeData[0].desc} />
+				</StyledSlide>
+				<StyledSlide>
 					<Cappuccino />
-				</SwiperSlide>
-				<SwiperSlide>
+				</StyledSlide>
+				<StyledSlide>
 					<Filter />
-				</SwiperSlide>
-			</Swiper>
+				</StyledSlide>
+			</StyledSwiper>
 		</StyledCoffeeSection>
 	)
 }
+const StyledSwiper = styled(Swiper)`
+	margin: 0 auto;
+	width: 100%;
+	position: relative;
+	z-index: 0;
+	display: flex;
+	gap: 5px;
+`
+const StyledSlide = styled(SwiperSlide)`
+	display: flex;
+	justify-content: center;
+`

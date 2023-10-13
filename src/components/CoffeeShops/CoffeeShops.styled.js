@@ -1,13 +1,17 @@
 import styled from 'styled-components'
 
 export const StyledCoffeeSection = styled.section`
+	display: none;
 	@media screen and (min-width: 1280px) {
 		background-color: ${({ theme }) => theme.colors.ligthGreen};
+		display: block;
 		/* display: flex; */
 		flex-direction: row;
 		/* gap: 15px; */
-		padding: 44px 0;
+		padding: 44px 20px;
+
 		margin-bottom: 130px;
+
 		/* align-items: center;
 		justify-content: center; */
 	}
@@ -15,10 +19,12 @@ export const StyledCoffeeSection = styled.section`
 
 export const StyledCoffeeCard = styled.div`
 	display: flex;
+	align-items: center;
 	flex-direction: column;
 	padding-top: 44px;
 	padding-bottom: 47px;
-	width: 337px;
+	//width: 337px;
+	width: 100%;
 	height: 458px;
 	border-radius: 25px;
 	background-color: ${({ theme }) => theme.colors.white};
@@ -40,6 +46,7 @@ export const StyledTextCard = styled.p`
 	font-size: 19px;
 	text-align: center;
 	align-items: center;
+	flex-grow: 1;
 	width: 248px;
 	align-self: center;
 	line-height: 36px;

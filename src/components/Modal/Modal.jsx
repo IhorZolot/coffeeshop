@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import { BackgroundModal, Content, OptionMenu } from './Modal.styled'
+import { BackgroundModal, ContentModal, OptionModalMenu } from './Modal.styled'
 
 export const Modal = ({ children, onClose }) => {
 	const onBackdropClick = event => {
@@ -8,26 +8,26 @@ export const Modal = ({ children, onClose }) => {
 		}
 	}
 
-	useEffect(() => {
-		const handleKeyDown = event => {
-			if (event.key === 'Escape') {
-				onClose()
-			}
-		}
-		document.addEventListener('keydown', handleKeyDown)
-		return () => {
-			document.removeEventListener('keydown', handleKeyDown)
-		}
-	}, [onClose])
+	// useEffect(() => {
+	// 	const handleKeyDown = event => {
+	// 		if (event.key === 'Escape') {
+	// 			onClose()
+	// 		}
+	// 	}
+	// 	document.addEventListener('keydown', handleKeyDown)
+	// 	return () => {
+	// 		document.removeEventListener('keydown', handleKeyDown)
+	// 	}
+	// }, [onClose])
 
 	return (
 		<BackgroundModal onClick={onBackdropClick}>
-			<Content>
-				<OptionMenu>
-					<button onClick={onClose}>Close</button>
-				</OptionMenu>
+			<ContentModal>
+				<OptionModalMenu>
+					<button onClick={onClose}>X</button>
+				</OptionModalMenu>
 				{children}
-			</Content>
+			</ContentModal>
 		</BackgroundModal>
 	)
 }

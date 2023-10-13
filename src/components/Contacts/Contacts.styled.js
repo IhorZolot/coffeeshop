@@ -1,10 +1,12 @@
 import styled from 'styled-components'
 
 export const StyledContacts = styled.section`
-	width: 375px;
 	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: left;
 	@media screen and (min-width: 1280px) {
-		width: 1280px;
+		display: flex;
 		flex-direction: row;
 		align-items: center;
 		justify-content: center;
@@ -25,15 +27,18 @@ export const StyledSpanContacts = styled.span`
 `
 export const StyledMap = styled.div`
 	width: 337px;
+
 	/* height: 300px; */
 	margin-bottom: 30px;
 	@media screen and (min-width: 1280px) {
+		width: 637px;
 		margin-right: 176px;
 	}
 `
 export const StyledAddress = styled.div`
 	display: flex;
 	flex-direction: column;
+
 	@media screen and (min-width: 1280px) {
 		padding-left: 100px;
 	}

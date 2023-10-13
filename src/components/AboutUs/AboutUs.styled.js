@@ -3,10 +3,10 @@ import styled from 'styled-components'
 export const StyledAboutUs = styled.section`
 	display: flex;
 	flex-direction: column;
-	width: 375px;
+	//width: 375px;
 	position: relative;
 	@media screen and (min-width: 1280px) {
-		width: 1280px;
+		//width: 1280px;
 		flex-direction: row;
 		justify-content: space-between;
 		margin-bottom: 110px;
@@ -62,13 +62,12 @@ export const StyledTextUs = styled.p`
 	font-family: ${({ theme }) => theme.fonts.alegreya};
 	color: ${({ theme }) => theme.colors.gray};
 	font-size: 19px;
-	width: 313px;
+
 	margin-left: 32px;
 	margin-bottom: 30px;
 	text-align: left;
 	line-height: 36px;
 	@media screen and (min-width: 1280px) {
-		width: 645px;
 		margin-bottom: 15px;
 	}
 `

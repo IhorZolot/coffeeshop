@@ -5,7 +5,9 @@ body{
   margin: 0; 
 
   }
-
+html{
+  scroll-behavior: smooth;
+}
 p,
 h1,
 h2,

@@ -14,10 +14,12 @@ export const Header = () => {
 			</StyledHeaderLogo>
 			<StyledHeaderUl>
 				{links.map(item => (
-					<li key={item}>{item}</li>
+					<li key={item}>
+						<a href={`/#${item}`}>{item}</a>
+					</li>
 				))}
+				<StyledHeaderButton>Contact Us</StyledHeaderButton>
 			</StyledHeaderUl>
-			<StyledHeaderButton>Contact Us</StyledHeaderButton>
 		</StyledHeader>
 	)
 }

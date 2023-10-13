@@ -11,6 +11,11 @@ export const StyledButton = styled.button`
 	border-radius: 8px;
 	color: white;
 	cursor: pointer;
+	display: ${props => (props.$hideable ? 'none' : 'block')};
+	@media screen and (min-width: 1280px) {
+		display: block;
+		align-items: center;
+	}
 	&:hover {
 		background-color: #1a403d;
 	}

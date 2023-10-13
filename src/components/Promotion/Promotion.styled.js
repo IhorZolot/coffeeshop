@@ -69,10 +69,3 @@ export const StyledTextPromotion = styled.p`
 		width: 645px;
 	}
 `
-export const StyledButtonPromotion = styled.button`
-	display: none;
-	@media screen and (min-width: 1280px) {
-		display: block;
-		align-items: center;
-	}
-`
