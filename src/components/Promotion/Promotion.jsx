@@ -14,7 +14,7 @@ export const Promotion = ({ toggleModal }) => {
 		<StyledPromotion id='Promotion' $reverse>
 			<StyledSpanPromotion>Promotion</StyledSpanPromotion>
 			<StyledImgPromotion>
-				<img src='/public/pictures/paper-cup.svg' />
+				<img src='/pictures/paper-cup.svg' />
 			</StyledImgPromotion>
 			<StyledTextBoxPromotion>
 				<StyledTitlePromotion>Coffee of the day</StyledTitlePromotion>
