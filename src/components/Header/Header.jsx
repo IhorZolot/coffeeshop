@@ -1,13 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Sprite } from '/public/pictures/Sprite'
 import { StyledHeader, StyledHeaderBurger, StyledHeaderButton, StyledHeaderLogo, StyledHeaderUl } from './Header.styled'
+import { MobileMenu } from '../MobileMenu/MobileMenu'
 
 export const Header = () => {
 	const phoneNumber = '+380730000000'
 	const links = ['About us', 'Promotion', 'Shop', 'Contacts']
+
+	const [isMenuOpen, setIsMenuOpen] = useState(false)
+
+	const toggleMenu = () => {
+		setIsMenuOpen(!isMenuOpen)
+	}
+
 	return (
 		<StyledHeader>
-			<StyledHeaderBurger>
+			<StyledHeaderBurger onClick={toggleMenu}>
 				<Sprite name={'burger-menu'} />
 			</StyledHeaderBurger>
 			<StyledHeaderLogo>
@@ -23,6 +31,7 @@ export const Header = () => {
 					<a href={`tel:${phoneNumber}`}>Contact Us</a>
 				</StyledHeaderButton>
 			</StyledHeaderUl>
+			{isMenuOpen && <MobileMenu />}
 		</StyledHeader>
 	)
 }
