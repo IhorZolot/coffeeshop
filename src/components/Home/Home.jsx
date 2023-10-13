@@ -26,7 +26,7 @@ export const Home = () => {
 					<Sprite name={'decor-line'} />
 				</StyledDecorLine>
 				<StyledBoxGrinder>
-					<img src={'/public/pictures/coffee-grinder.svg'} alt='coffee-grinder' />
+					<img src={'/pictures/coffee-grinder.svg'} alt='coffee-grinder' />
 				</StyledBoxGrinder>
 				<StyledBoxSocial>
 					<StyledSocialIcon>

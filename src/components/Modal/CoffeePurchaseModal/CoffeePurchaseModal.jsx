@@ -26,7 +26,7 @@ export const CoffeePurchaseModal = () => {
 		<StyledModalCard>
 			<StyledCoffeeInfo>
 				<StyledCoffeePic>
-					<img src='../../../../public/pictures/coffee-cup.svg' />
+					<img src='/pictures/coffee-cup.svg' />
 				</StyledCoffeePic>
 				<StyledCoffeeName>Americano</StyledCoffeeName>
 				<StyledCoffeeDescription>Дрібний помел</StyledCoffeeDescription>

@@ -11,7 +11,7 @@ export const Header = () => {
 				<Sprite name={'burger-menu'} />
 			</StyledHeaderBurger>
 			<StyledHeaderLogo>
-				<img src='/public/pictures/logoMova.svg' alt='Cafe Logo' />
+				<img src='/pictures/logoMova.svg' alt='Cafe Logo' />
 			</StyledHeaderLogo>
 			<StyledHeaderUl>
 				{links.map(item => (

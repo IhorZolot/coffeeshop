@@ -13,7 +13,7 @@ export const AboutUs = ({ $reverse }) => {
 		<StyledAboutUs id='About us' $reverse={$reverse}>
 			<StyledSpanAbout>About us</StyledSpanAbout>
 			<StyledImgUs>
-				<img src='/public/pictures/coffee-cup.svg' />
+				<img src='/pictures/coffee-cup.svg' />
 			</StyledImgUs>
 			<StyledTextBoxAbout>
 				<StyledTitleUs>Coffee Shop Samwayle</StyledTitleUs>
