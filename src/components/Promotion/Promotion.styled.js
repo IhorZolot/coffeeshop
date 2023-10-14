@@ -26,6 +26,7 @@ export const StyledSpanPromotion = styled.span`
 	}
 `
 export const StyledImgPromotion = styled.div`
+	height: 276px;
 	background-color: #a6cac3;
 	img {
 		transform: translate(60px, -20px);
