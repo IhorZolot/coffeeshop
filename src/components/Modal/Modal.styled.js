@@ -15,8 +15,14 @@ export const ContentModal = styled.div`
 	border: none;
 	padding: 8px 16px;
 	border-radius: 4px;
+	/* cursor: pointer; */
+`
+export const StyledModalCloseButton = styled.div`
+	position: absolute;
+	right: 16px;
+	top: 16px;
 	cursor: pointer;
-	margin-right: 16px;
+	background-color: none;
 `
 export const OptionModalMenu = styled.div`
 	display: flex;

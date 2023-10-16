@@ -26,14 +26,18 @@ export const StyledSpanPromotion = styled.span`
 	}
 `
 export const StyledImgPromotion = styled.div`
-	height: 276px;
-	background-color: #a6cac3;
+	height: 287px;
+	width: 100%;
+	background: ${({ theme }) => theme.colors.sectionGreen};
 	img {
-		transform: translate(60px, -20px);
-		width: 65%;
+		transform: translate(0, -20px);
+		/* transform: scale(1.1); */
+		width:100%;
+		height: 115%;
 	}
 	margin-bottom: 23px;
 	@media screen and (min-width: 1280px) {
+		height: 276px;
 		width: 40%;
 		img {
 			transform: translate(110px, -30px);

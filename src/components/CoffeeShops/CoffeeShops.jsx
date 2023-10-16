@@ -25,14 +25,14 @@ export const CoffeeShops = ({ toggleModal }) => {
 			<MediaQuery minWidth={1280}>
 				<StyledSwiper
 					slidesPerView={3}
-					spaceBetween={20}
+					spaceBetween={15}
 					loop={true}
 					pagination={{
 						clickable: true,
 					}}
-					navigation={false}
+					navigation={true}
 					modules={[Pagination, Navigation]}
-					className='mySwiper'
+					// className='mySwiper'
 				>
 					{slides}
 				</StyledSwiper>

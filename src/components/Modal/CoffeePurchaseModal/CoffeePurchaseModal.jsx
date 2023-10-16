@@ -1,47 +1,48 @@
 import React, { useState } from 'react'
-import {
-	StyledCoffeeDescription,
-	StyledCoffeeInfo,
-	StyledCoffeeName,
-	StyledCoffeePic,
-	StyledModalCard,
-	StyledQuantity,
-	StyledQuantityLabel,
-	StyledTotalPrice,
-} from './CoffeePurchaseModal.styled'
+import { StyledCashPrice, StyledCoffeeInfo, StyledCoffeeName, StyledCoffeeQuantity, StyledLine, StyledModalCard, StyledQuantity,  StyledTotalCard,  StyledTotalPrice } from './CoffeePurchaseModal.styled'
+import { Button } from '../../Button/Button'
 
 export const CoffeePurchaseModal = () => {
-	const [quantity, setQuantity] = useState(1)
+	const [quantity, setQuantity] = useState(0)
 
-	const handleIncreaseQuantity = () => {
+	const handleIncQuantity = () => {
 		setQuantity(quantity + 1)
 	}
-	const handleDecreaseQuantity = () => {
-		if (quantity > 1) {
+	const handleDecQuantity = () => {
+		if (quantity > 0) {
 			setQuantity(quantity - 1)
 		}
 	}
 
 	return (
 		<StyledModalCard>
-			<StyledCoffeeInfo>
-				<StyledCoffeePic>
-					<img src='/pictures/coffee-cup.svg' />
-				</StyledCoffeePic>
-				<StyledCoffeeName>Americano</StyledCoffeeName>
-				<StyledCoffeeDescription>Дрібний помел</StyledCoffeeDescription>
-			</StyledCoffeeInfo>
-
+			<StyledCoffeeInfo>Ваше Замовлення</StyledCoffeeInfo>
+			<StyledLine />
+			<StyledTotalCard>
+			<StyledCoffeeName>Назва напою</StyledCoffeeName>
 			<StyledQuantity>
-				<StyledQuantityLabel>Кількість:</StyledQuantityLabel>
-				<div>
-					<button onClick={handleDecreaseQuantity}>-</button>
-					<input type='number' value={quantity} onChange={e => setQuantity(parseInt(e.target.value))} />
-					<button onClick={handleIncreaseQuantity}>+</button>
-				</div>
+				<StyledCoffeeQuantity onClick={handleDecQuantity}><span>-</span></StyledCoffeeQuantity>
+				<h3>{quantity}</h3>
+				<StyledCoffeeQuantity onClick={handleIncQuantity}><span>+</span></StyledCoffeeQuantity>
 			</StyledQuantity>
-			<StyledTotalPrice>До сплатигрн.</StyledTotalPrice>
-			<button>Придбати</button>
+			<StyledLine />
+				<StyledTotalPrice>Загалом: {quantity}</StyledTotalPrice>
+			</StyledTotalCard>
+			<StyledCashPrice>
+			<a href="/shop" className="menu-link active-link">Продовжити</a>
+				<Button>Замовити</Button>
+			</StyledCashPrice>
 		</StyledModalCard>
 	)
 }
+
+
+
+{/* <StyledQuantityLabel>
+				<StyledCoffeePic>
+					<img src='/pictures/coffee-cup.svg' />
+				</StyledCoffeePic>
+				<StyledCoffeePic2>
+					<img src='/pictures/paper-cup.svg' />
+				</StyledCoffeePic2>
+			</StyledQuantityLabel> */}

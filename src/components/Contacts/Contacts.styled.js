@@ -65,6 +65,7 @@ export const StyledAddressButton = styled.button`
 	color: ${({ theme }) => theme.colors.black};
 	font-family: ${({ theme }) => theme.fonts.josefine};
 	align-self: center;
+	border-radius: 8px;
 	box-shadow: (0px 4px 10px rgba(0, 0, 0, 0.17));
 
 	@media screen and (min-width: 1280px) {

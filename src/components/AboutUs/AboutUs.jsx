@@ -16,7 +16,7 @@ export const AboutUs = ({ $reverse }) => {
 				<img src='/pictures/coffee-cup.svg' />
 			</StyledImgUs>
 			<StyledTextBoxAbout>
-				<StyledTitleUs>Coffee Shop Samwayle</StyledTitleUs>
+				<StyledTitleUs>Coffee Shop Mova</StyledTitleUs>
 				<StyledTextUs>
 					Only one moment - when the barista reaches out over the bar to transfer the cup to the outstretched hand of
 					the buyer. But this is exactly the moment when a connection arises between us and our guests.

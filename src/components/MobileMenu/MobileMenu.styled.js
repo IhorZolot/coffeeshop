@@ -3,7 +3,6 @@ import styled from 'styled-components'
 export const StyledMobileMenu = styled.div`
 	width: 375px;
 	height: 812px;
-	position: relative;
 	justify-content: center;
 `
 export const StyledLogo = styled.div`
@@ -16,21 +15,30 @@ export const StyledLogo = styled.div`
 export const StyledButton = styled.button`
 	position: absolute;
 	top: -4px;
-	right: 15px;
+	left: 15px;
 	cursor: pointer;
 `
 export const StyledButtonSvg = styled.div`
 	width: 22px;
 	height: 22px;
+	background: none;
 `
 export const StyledLinkMenu = styled.ul`
 	display: flex;
 	flex-direction: column;
 	gap: 70px;
-	color: ${({ theme }) => theme.colors.black};
 	font-family: ${({ theme }) => theme.fonts.josefine};
 	font-size: 36px;
 	font-style: normal;
+	& a {
+		color: ${({ theme }) => theme.colors.black};
+			&:hover {
+				font-weight: bold;
+			}
+			&:focus {
+				font-weight: bold;
+			}
+		}
 `
 export const StyledSocialIconMenu = styled.div`
 	display: flex;
@@ -39,6 +47,9 @@ export const StyledSocialIconMenu = styled.div`
 	margin-top: 91px;
 `
 export const StyledSocialIcon = styled.div`
-	width: 45px;
-	height: 45px;
+	font-size: 34px;
+	color: ${({ theme }) => theme.colors.gray};
+	:hover {
+		color: ${({ theme }) => theme.colors.buttonGreen}; 
+}
 `

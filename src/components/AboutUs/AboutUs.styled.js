@@ -26,19 +26,23 @@ export const StyledSpanAbout = styled.span`
 	}
 `
 export const StyledImgUs = styled.div`
-	background-color: ${({ theme }) => theme.colors.creamy};
+height: 248px;
+width: 100%;
+	background-color: ${({ theme }) => theme.colors.sectionCreamy};
 	img {
-		transform: translate(18px, -24px);
-		width: 91%;
+		transform: translate(10px, -20px);
+		/* transform: scale(1.1); */
+		width:100%;
+		height: 100%;
 		stroke: #af9283;
 	}
 	margin-bottom: 30px;
 	@media screen and (min-width: 1280px) {
+		height: 287px;
 		width: 40%;
-		background-color: wheat;
 		img {
-			transform: translate(60px, 60px);
-			width: 95%;
+			transform: translate(100px, 60px);
+			width: 100%;
 		}
 	}
 `
@@ -53,7 +57,6 @@ export const StyledTitleUs = styled.h2`
 	font-family: ${({ theme }) => theme.fonts.josefine};
 	color: ${({ theme }) => theme.colors.black};
 	font-size: 38px;
-	margin-left: 32px;
 	margin-bottom: 30px;
 	text-align: left;
 `
@@ -61,8 +64,6 @@ export const StyledTextUs = styled.p`
 	font-family: ${({ theme }) => theme.fonts.alegreya};
 	color: ${({ theme }) => theme.colors.gray};
 	font-size: 19px;
-
-	margin-left: 32px;
 	margin-bottom: 30px;
 	text-align: left;
 	line-height: 36px;

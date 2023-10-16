@@ -3,7 +3,6 @@ import styled from 'styled-components'
 export const StyledHome = styled.section`
 	display: flex;
 	align-items: center;
-	justify-content: center;
 	flex-direction: column;
 	margin-bottom: 200px;
 	@media screen and (min-width: 1280px) {
@@ -13,10 +12,15 @@ export const StyledHome = styled.section`
 		margin-bottom: 180px;
 	}
 `
-// export const StyledSpanLogo = styled.span`
-// 	color: ${({ theme }) => theme.colors.buttonGreen};
-// `
-export const StyledLeftSide = styled.div``
+export const StyledLeftSide = styled.div`
+display: flex;
+flex-direction: column;
+	align-items: center;
+	@media screen and (min-width: 1280px) {
+		display: block;
+	}
+
+	`
 export const StyledTitleH3 = styled.h3`
 	color: ${({ theme }) => theme.colors.gray};
 	font-family: ${({ theme }) => theme.fonts.cedarville};
@@ -36,7 +40,6 @@ export const StyledTitleH1 = styled.h1`
 		font-size: 63px;
 	}
 `
-export const StyledButtonHome = styled.button``
 export const StyledRightSide = styled.div`
 	display: none;
 	@media screen and (min-width: 1280px) {
@@ -56,7 +59,7 @@ export const StyledDecorLine = styled.div`
 export const StyledBoxGrinder = styled.div`
 	width: 410px;
 	height: 466px;
-	background: #a6cac3;
+	background: ${({ theme }) => theme.colors.sectionGreen};
 	img {
 		transform: translate(60px, 160px);
 		width: 80%;
@@ -66,15 +69,18 @@ export const StyledBoxGrinder = styled.div`
 `
 export const StyledBoxSocial = styled.div`
 	display: flex;
-	gap: 14px;
+	gap: 10px;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 `
 
 export const StyledSocialIcon = styled.div`
-	width: 32px;
-	height: 32px;
+	font-size: 28px;
+	color: ${({ theme }) => theme.colors.gray};
+	:hover {
+		color: ${({ theme }) => theme.colors.buttonGreen}; 
+}
 `
 export const StyledSpanText = styled.span`
 	font-size: 28px;

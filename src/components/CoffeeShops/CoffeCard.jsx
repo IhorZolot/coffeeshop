@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyledButtonCard, StyledCoffeeCard, StyledTextCard, StyledTitleCard } from './CoffeeShops.styled'
+import {  StyledCoffeeCard, StyledTextCard, StyledTitleCard } from './CoffeeShops.styled'
 import { Button } from '../Button/Button'
 
 export const CoffeCard = ({ title, desc, onClick }) => {

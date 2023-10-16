@@ -10,6 +10,7 @@ import {
 } from './Contacts.styled'
 
 export const Contacts = () => {
+	const phoneNumber = '+380507047889'
 	return (
 		<StyledContacts id='Contacts'>
 			<StyledSpanContacts>Contacts</StyledSpanContacts>
@@ -23,9 +24,10 @@ export const Contacts = () => {
 			</StyledMap>
 			<StyledAddress>
 				<StyledAddressTitle>Our address</StyledAddressTitle>
-				<StyledAddressText>110 St-Cathedral Pkwy Station</StyledAddressText>
-				<StyledAddressText>4310 94th St, Flushing</StyledAddressText>
-				<StyledAddressButton>Сall us</StyledAddressButton>
+				<StyledAddressText>13 Sichovykh Strilʹtsiv street</StyledAddressText>
+				<StyledAddressText>4310 Sichovykh Strilʹtsiv street</StyledAddressText>
+				<StyledAddressButton>
+				<a href={`tel:${phoneNumber}`}>Contact Us</a></StyledAddressButton>
 			</StyledAddress>
 		</StyledContacts>
 	)

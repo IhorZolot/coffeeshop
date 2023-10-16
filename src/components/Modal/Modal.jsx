@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
-import { BackgroundModal, ContentModal, OptionModalMenu } from './Modal.styled'
+import { BackgroundModal, ContentModal, StyledModalCloseButton } from './Modal.styled'
+import { Sprite } from '../../../public/pictures/Sprite'
 
 export const Modal = ({ children, onClose }) => {
 	const onBackdropClick = event => {
@@ -23,7 +24,9 @@ export const Modal = ({ children, onClose }) => {
 	return (
 		<BackgroundModal onClick={onBackdropClick}>
 			<ContentModal>
-				<button onClick={onClose}>X</button>
+			<StyledModalCloseButton onClick={onClose}>
+				<Sprite name={'windows-close'} />
+			</StyledModalCloseButton>
 				{children}
 			</ContentModal>
 		</BackgroundModal>

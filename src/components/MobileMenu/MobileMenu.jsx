@@ -1,3 +1,4 @@
+import { BsInstagram, BsFacebook,BsTelegram } from 'react-icons/bs';
 import { Sprite } from '../../../public/pictures/Sprite'
 import {
 	StyledButton,
@@ -9,33 +10,41 @@ import {
 	StyledSocialIconMenu,
 } from './MobileMenu.styled'
 
-export const MobileMenu = () => {
+export const MobileMenu = ({toggleMenu}) => {
 	const links = ['Home', 'About us', 'Promotion', 'Shop', 'Contacts']
 	return (
 		<StyledMobileMenu>
 			<StyledLogo>
-				<img src='/pictures/logo-cafe.svg' alt='Cafe Logo' />
+				<img src='/pictures/logoMova.svg' alt='Cafe Logo' />
 			</StyledLogo>
-			<StyledButton>
+			<StyledButton onClick={toggleMenu}>
 				<StyledButtonSvg>
 					<Sprite name={'windows-close'} />
 				</StyledButtonSvg>
 			</StyledButton>
 			<StyledLinkMenu>
 				{links.map(item => (
-					<li key={item}>{item}</li>
+					<li key={item}>
+						<a href={`/#${item}`}>{item}</a>
+						</li>
 				))}
 			</StyledLinkMenu>
 			<StyledSocialIconMenu>
+				<a href="https://www.instagram.com/your_instagram_profile">
+					<StyledSocialIcon>
+					<BsInstagram />
+					</StyledSocialIcon>
+    </a>
+				<a href="https://www.facebook.com/your_facebook_profile">
 				<StyledSocialIcon>
-					<img src='/pictures/icon-instagram.svg' alt='Instagram Icon' />
-				</StyledSocialIcon>
+      <BsFacebook />
+			</StyledSocialIcon>
+    </a>
+				<a href="https://t.me/your_telegram_channel">
 				<StyledSocialIcon>
-					<img src='/pictures/icon-facebook.svg' alt='Facebook Icon' />
-				</StyledSocialIcon>
-				<StyledSocialIcon>
-					<img src='/pictures/icon-telegram.svg' alt='Telegram Icon' />
-				</StyledSocialIcon>
+      <BsTelegram/>
+			</StyledSocialIcon>
+    </a>
 			</StyledSocialIconMenu>
 		</StyledMobileMenu>
 	)

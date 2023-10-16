@@ -6,9 +6,9 @@ export const theme = {
 	},
 	colors: {
 		buttonGreen: '#2D635E',
-		sectionGreen: '#9fb7b2',
+		sectionGreen: '#c1ddd6',
 		ligthGreen: '#e3eBe7',
-		creamy: '#fae9e0',
+		sectionCreamy: '#fae9e0',
 		gray: '#444a4a',
 		black: '#000000',
 		white: '#ffffff',
