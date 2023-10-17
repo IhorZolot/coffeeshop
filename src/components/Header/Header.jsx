@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Sprite } from '/public/pictures/Sprite'
 import { StyledHeader, StyledHeaderBurger, StyledHeaderButton, StyledHeaderLogo, StyledHeaderMobile, StyledHeaderUl } from './Header.styled'
 import { MobileMenu } from '../MobileMenu/MobileMenu'
@@ -13,13 +13,23 @@ export const Header = () => {
 		setIsMenuOpen(!isMenuOpen)
 	}
 
+	useEffect(()=> {
+		if(isMenuOpen){
+			document.body.style.overflow='hidden'
+		}
+		else {
+			document.body.style.overflow='visible'
+		}
+	},[isMenuOpen])
+
+
 	return (
-		<StyledHeader>
+		<StyledHeader >
 			<StyledHeaderBurger onClick={toggleMenu}>
 				<Sprite name={'burger-menu'} />
 			</StyledHeaderBurger>
 			<StyledHeaderLogo>
-				<img src='/pictures/logoMova.svg' alt='Cafe Logo' />
+				<a href='/#Home'><img src='/pictures/logoMova.svg' alt='Cafe Logo' /></a>
 			</StyledHeaderLogo>
 			<StyledHeaderMobile>
 					<a href={`tel:${phoneNumber}`}><Sprite name={'decor-phone'} /></a>
@@ -34,7 +44,7 @@ export const Header = () => {
 					<a href={`tel:${phoneNumber}`}>Contact Us</a>
 				</StyledHeaderButton>
 			</StyledHeaderUl>
-			{isMenuOpen && <MobileMenu toggleMenu={toggleMenu} />}
+			{isMenuOpen && <MobileMenu close={toggleMenu} />}
 		</StyledHeader>
 	)
 }

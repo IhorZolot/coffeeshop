@@ -5,7 +5,8 @@ import 'swiper/css'
 import 'swiper/css/pagination'
 import 'swiper/css/navigation'
 import { Pagination, Navigation } from 'swiper/modules'
-import { StyledCoffeeSection, StyledSwiper } from './CoffeeShops.styled'
+import { StyledCoffeeSection, StyledSwiper, SwiperContainer } from './CoffeeShops.styled'
+import {FcNext, FcPrevious} from 'react-icons/fc'
 
 import { coffeeData } from '../../assets/coffeeData'
 import { CoffeCard } from './CoffeCard'
@@ -23,6 +24,10 @@ export const CoffeeShops = ({ toggleModal }) => {
 				<CoffeeShopsMobile toggleModal={toggleModal} />
 			</MediaQuery>
 			<MediaQuery minWidth={1280}>
+				<SwiperContainer>
+
+					<FcPrevious className='prevSlide'/>
+				<FcNext className='nextSlide'/>
 				<StyledSwiper
 					slidesPerView={3}
 					spaceBetween={15}
@@ -30,12 +35,16 @@ export const CoffeeShops = ({ toggleModal }) => {
 					pagination={{
 						clickable: true,
 					}}
-					navigation={true}
+					navigation={{
+						nextEl: '.nextSlide',
+						prevEl: '.prevSlide'
+					}}
 					modules={[Pagination, Navigation]}
 					// className='mySwiper'
-				>
+					>
 					{slides}
 				</StyledSwiper>
+					</SwiperContainer>
 			</MediaQuery>
 		</StyledCoffeeSection>
 	)

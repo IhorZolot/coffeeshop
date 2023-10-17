@@ -7,13 +7,16 @@ export const StyledHeader = styled.header`
 	align-items: center;
 	justify-content: space-between;
 	margin-bottom: 150px;
+	position: sticky;
+	top:0;
+	z-index: 10;
+	padding: 12px 20px;
+	background-color: white;
 	@media screen and (min-width: 1280px) {
 		justify-content: space-between;
-		padding: 12px 20px;
 		margin-bottom: 50px;
-		position: sticky;
-		top: 0;
-		z-index: 10;
+		
+
 		/* position: fixed;
   top: 0;
   left: 0;
@@ -37,6 +40,7 @@ export const StyledHeaderLogo = styled.div`
 `
 export const StyledHeaderMobile = styled.div`
 	cursor: pointer;
+
 	@media screen and (min-width: 1280px) {
 		display: none;
 	}

@@ -10,21 +10,21 @@ import {
 	StyledSocialIconMenu,
 } from './MobileMenu.styled'
 
-export const MobileMenu = ({toggleMenu}) => {
+export const MobileMenu = ({close}) => {
 	const links = ['Home', 'About us', 'Promotion', 'Shop', 'Contacts']
 	return (
 		<StyledMobileMenu>
 			<StyledLogo>
 				<img src='/pictures/logoMova.svg' alt='Cafe Logo' />
 			</StyledLogo>
-			<StyledButton onClick={toggleMenu}>
+			<StyledButton onClick={close}>
 				<StyledButtonSvg>
 					<Sprite name={'windows-close'} />
 				</StyledButtonSvg>
 			</StyledButton>
 			<StyledLinkMenu>
 				{links.map(item => (
-					<li key={item}>
+					<li onClick={close} key={item}>
 						<a href={`/#${item}`}>{item}</a>
 						</li>
 				))}

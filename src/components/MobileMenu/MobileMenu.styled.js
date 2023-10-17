@@ -1,22 +1,34 @@
 import styled from 'styled-components'
 
 export const StyledMobileMenu = styled.div`
-	width: 375px;
-	height: 812px;
+
 	justify-content: center;
+	position: fixed;
+	display: flex;
+	flex-direction: column;
+	background: white;
+	z-index: 999;
+	padding: 30px 0;
+	inset: 0;
+	// top:0 , right:0
 `
 export const StyledLogo = styled.div`
 	margin-top: 30px;
+	margin: 0 auto;
+	display: block;
 	margin-bottom: 92px;
 	width: 163px;
 	height: 35px;
-	margin-left: 90px;
+	
 `
 export const StyledButton = styled.button`
 	position: absolute;
-	top: -4px;
+	top: 10px;
 	left: 15px;
 	cursor: pointer;
+	background: transparent;
+	border: none;
+
 `
 export const StyledButtonSvg = styled.div`
 	width: 22px;
@@ -26,7 +38,9 @@ export const StyledButtonSvg = styled.div`
 export const StyledLinkMenu = styled.ul`
 	display: flex;
 	flex-direction: column;
-	gap: 70px;
+	flex-grow: 1;
+	justify-content: space-between;
+	
 	font-family: ${({ theme }) => theme.fonts.josefine};
 	font-size: 36px;
 	font-style: normal;

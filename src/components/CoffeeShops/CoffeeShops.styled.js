@@ -1,6 +1,10 @@
 import styled from 'styled-components'
 import { Swiper, SwiperSlide } from 'swiper/react'
-
+export const SwiperContainer = styled.div`
+	position: relative;
+	z-index: 1;
+	width: 100%;
+`
 export const StyledCoffeeSection = styled.section`
 	margin-bottom: 40px;
 	@media screen and (min-width: 1280px) {
@@ -21,9 +25,12 @@ export const StyledCoffeeCard = styled.div`
 	border-radius: 25px;
 	background-color: ${({ theme }) => theme.colors.white};
 	box-shadow: 0px 23px 34px 0px rgba(35, 57, 55, 0.17);
+	
 	@media screen and (min-width: 1280px) {
 		/* margin-bottom: 0; */
+		box-shadow: 0px 0 5px 1px rgba(35, 57, 55, 0.17);
 		/* width: 80%; */
+
 	}
 `
 export const StyledTitleCard = styled.h3`
@@ -50,6 +57,8 @@ export const StyledButtonCard = styled.button`
 export const StyledSwiper = styled(Swiper)`
 	/* margin: 0 auto; */
 	width: 90%;
+	overflow-y: visible;
+	padding: 30px 0px;
 	position: relative;
 	z-index: 0;
 	/* display: flex; */

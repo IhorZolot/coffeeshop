@@ -7,6 +7,7 @@ body{
   }
 html{
   scroll-behavior: smooth;
+  scroll-padding-top: 7rem;
 }
 p,
 h1,
@@ -31,5 +32,15 @@ ul {
 }
 a {
   text-decoration: none;
+}
+.swiper-pagination{
+  transform: translateY(8px);
+}
+.prevSlide{
+  position: absolute;
+  left: 10px;
+  font-size: 2rem;
+  z-index: 999;
+  top: 40%;
 }
 `
