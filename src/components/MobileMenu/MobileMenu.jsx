@@ -1,5 +1,5 @@
 import { BsInstagram, BsFacebook,BsTelegram } from 'react-icons/bs';
-import { Sprite } from '../../../public/pictures/Sprite'
+import { Sprite } from '/public/pictures/Sprite'
 import {
 	StyledButton,
 	StyledButtonSvg,

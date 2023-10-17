@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import { BackgroundModal, ContentModal, StyledModalCloseButton } from './Modal.styled'
-import { Sprite } from '../../../public/pictures/Sprite'
+import { Sprite } from '/public/pictures/Sprite'
 
 export const Modal = ({ children, onClose }) => {
 	const onBackdropClick = event => {
