@@ -23,6 +23,9 @@ export default function App() {
 			{isOpen && (
 				<Modal onClose={toggleModal}>
 					<CoffeePurchaseModal />
+					{/* <h1>Чи точно ти хочеш вийти?</h1>
+					<button>Tak</button>
+					<button>Hi</button> */}
 				</Modal>
 			)}
 		</>

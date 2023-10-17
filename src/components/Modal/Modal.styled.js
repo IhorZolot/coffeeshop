@@ -8,19 +8,22 @@ export const BackgroundModal = styled.div`
 	inset: 0;
 	background: rgba(0, 0, 0, 0.4);
 	backdrop-filter: blur(5px);
+	z-index: 9999;
 `
 export const ContentModal = styled.div`
 	width: 60vw;
+
 	background: #e0e0e0;
 	border: none;
-	padding: 8px 16px;
+	padding: 18px 16px;
 	border-radius: 4px;
 	/* cursor: pointer; */
 `
 export const StyledModalCloseButton = styled.div`
-	position: absolute;
-	right: 16px;
-	top: 16px;
+	/* position: absolute; */
+	display: flex;
+	margin-bottom: 10px;
+	justify-content: end;
 	cursor: pointer;
 	background-color: none;
 `

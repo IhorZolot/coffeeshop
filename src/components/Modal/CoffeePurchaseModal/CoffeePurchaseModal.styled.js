@@ -4,10 +4,11 @@ export const StyledModalCard = styled.div`
 	display: flex;
 	flex-direction: column;
 	padding: 20px;
-	background-color: #E3EBE7;
+	//background-color: #E3EBE7;
+	background-color: inherit;
 	text-align: left;
 	border-radius: 10px;
-	box-shadow: 0px 23px 34px 0px rgba(35, 57, 55, 0.17);
+	//box-shadow: 0px 23px 34px 0px rgba(35, 57, 55, 0.17);
 `
 
 export const StyledCoffeeInfo = styled.h2`
