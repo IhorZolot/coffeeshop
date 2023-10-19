@@ -1,30 +1,27 @@
 import styled from 'styled-components'
 
 export const StyledMobileMenu = styled.div`
-
 	justify-content: center;
 	position: fixed;
 	display: flex;
 	flex-direction: column;
 	background: white;
 	z-index: 999;
-	padding: 30px 0;
+	padding: 14px 0;
 	inset: 0;
-	// top:0 , right:0
 `
 export const StyledLogo = styled.div`
-	margin-top: 30px;
 	margin: 0 auto;
 	display: block;
 	margin-bottom: 92px;
-	width: 163px;
+	width: 130px;
 	height: 35px;
 	
 `
 export const StyledButton = styled.button`
 	position: absolute;
-	top: 10px;
-	left: 15px;
+	top: 20px;
+	left:50px;
 	cursor: pointer;
 	background: transparent;
 	border: none;

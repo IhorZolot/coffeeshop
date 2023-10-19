@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const StyledHeader = styled.header`
 	font-family: ${({ theme }) => theme.fonts.josefine};
-	font-size: 16px;
+	font-size: 20px;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -15,13 +15,6 @@ export const StyledHeader = styled.header`
 	@media screen and (min-width: 1280px) {
 		justify-content: space-between;
 		margin-bottom: 50px;
-		
-
-		/* position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 100; */
 	}
 `
 export const StyledHeaderBurger = styled.div`
@@ -35,8 +28,6 @@ export const StyledHeaderBurger = styled.div`
 `
 export const StyledHeaderLogo = styled.div`
 	width: 130px;
-	height: 33px;
-	display: flex;
 `
 export const StyledHeaderMobile = styled.div`
 	cursor: pointer;
@@ -45,7 +36,6 @@ export const StyledHeaderMobile = styled.div`
 		display: none;
 	}
 `
-
 export const StyledHeaderUl = styled.ul`
 	display: none;
 	@media screen and (min-width: 1280px) {
@@ -67,10 +57,15 @@ export const StyledHeaderButton = styled.button`
 	display: none;
 	@media screen and (min-width: 1280px) {
 		display: block;
+		font-size: 16px;
 		border-radius: 8px;
 		padding: 14px 32px;
 		background-color: ${({ theme }) => theme.colors.buttonGreen};
-		color: white;
+		& a {
+			font-family: ${({ theme }) => theme.fonts.josefine};
+			color: white;
+		}
+		
 		&:hover {
 			background-color: #1a403d;
 		}

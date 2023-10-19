@@ -72,4 +72,10 @@ export const StyledCardList = styled.ul`
 	display: flex;
 	flex-direction: column;
 	gap: 30px;
+	margin-bottom: 60px;
+
+	@media screen and (min-width: 768px){
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
 `

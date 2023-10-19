@@ -13,20 +13,30 @@ import {
 	StyledTitleH3,
 } from './Home.styled'
 import { Button } from '../Button/Button'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Menu } from '../Menu/Menu'
+import { useModal } from '../../hooks/useModal';
+import { Modal } from '../Modal/Modal';
 
 export const Home = () => {
+	const {isOpen, toggleModal} = useModal()
 	const [isMenuOpen, setIsMenuOpen] = useState(false)
-	const toggleMenu = () => {
-		setIsMenuOpen(!isMenuOpen)
-	}
+	
+	useEffect(()=> {
+		if(isMenuOpen){
+			document.body.style.overflow='hidden'
+		}
+		else {
+			document.body.style.overflow='visible'
+		}
+	},[isMenuOpen])
+	
 	return (
 		<StyledHome id='Home'>
 			<StyledLeftSide>
 				<StyledTitleH3>Drink coffee, enjoy with Mova</StyledTitleH3>
 				<StyledTitleH1>Coffee Shop</StyledTitleH1>
-				<Button onClick={toggleMenu}>Menu</Button>
+				<Button onClick={toggleModal}>Menu</Button>
 			</StyledLeftSide>
 			<StyledRightSide>
 				<StyledDecorLine>
@@ -54,7 +64,11 @@ export const Home = () => {
 					<StyledSpanText>Follow us</StyledSpanText>
 				</StyledBoxSocial>
 			</StyledRightSide>
-			{isMenuOpen && <Menu/>}
+			{isOpen && (
+				<Modal onClose={toggleModal}>
+					 <Menu />
+				</Modal>
+			)}
 		</StyledHome>
 	)
 }

@@ -10,7 +10,8 @@ import { useModal } from './hooks/useModal'
 import { CoffeePurchaseModal } from './components/Modal/CoffeePurchaseModal/CoffeePurchaseModal'
 
 export default function App() {
-	const { isOpen, toggleModal } = useModal()
+	const { isOpen, toggleModal, content, close } = useModal()
+	
 	return (
 		<>
 			<Header />
@@ -19,13 +20,9 @@ export default function App() {
 			<Promotion toggleModal={toggleModal} />
 			<CoffeeShops toggleModal={toggleModal} />
 			<Contacts />
-			{/* <MobileMenu /> */}
 			{isOpen && (
 				<Modal onClose={toggleModal}>
-					<CoffeePurchaseModal />
-					{/* <h1>Чи точно ти хочеш вийти?</h1>
-					<button>Tak</button>
-					<button>Hi</button> */}
+					<CoffeePurchaseModal close={close}  content={content} />
 				</Modal>
 			)}
 		</>

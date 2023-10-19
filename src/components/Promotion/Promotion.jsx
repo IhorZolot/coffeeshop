@@ -8,8 +8,12 @@ import {
 	StyledTextBoxPromotion,
 } from './Promotion.styled'
 import { Button } from '../Button/Button'
+import { Modal } from '../Modal/Modal'
+import { useModal } from '../../hooks/useModal'
+import { CoffeePurchaseModal } from '../Modal/CoffeePurchaseModal/CoffeePurchaseModal'
 
-export const Promotion = ({ toggleModal }) => {
+export const Promotion = () => {
+	const {isOpen, toggleModal} = useModal()
 	return (
 		<StyledPromotion id='Promotion' $reverse>
 			<StyledSpanPromotion>Promotion</StyledSpanPromotion>
@@ -24,10 +28,14 @@ export const Promotion = ({ toggleModal }) => {
 					should not be confused. n the second case, this refers not to diluted espresso, but to a drink prepared
 					through a filter system.
 				</StyledTextPromotion>
-
 				<Button $hideable onClick={toggleModal}>
 					Order now
 				</Button>
+				{isOpen && (
+				<Modal onClose={toggleModal}>
+					<CoffeePurchaseModal/>
+				</Modal>
+			)}
 			</StyledTextBoxPromotion>
 		</StyledPromotion>
 	)

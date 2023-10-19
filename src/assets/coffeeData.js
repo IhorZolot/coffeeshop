@@ -3,6 +3,8 @@ export const coffeeData = [
 		id: '1',
 		title: 'Espresso',
 		desc: 'Espresso - black coffee made in a coffee machine or a special coffee machine, where hot water is passed through		pressed ground beans at a pressure',
+		price:40,
+		count:1
 	},
 	{
 		id: '2',

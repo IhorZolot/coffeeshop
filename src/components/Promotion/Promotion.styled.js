@@ -34,6 +34,7 @@ export const StyledImgPromotion = styled.div`
 		/* transform: scale(1.1); */
 		width:100%;
 		height: 115%;
+
 	}
 	margin-bottom: 23px;
 	@media screen and (min-width: 1280px) {
@@ -57,6 +58,7 @@ export const StyledTitlePromotion = styled.h2`
 	font-size: 30px;
 	margin-bottom: 25px;
 	text-align: left;
+	margin-top: 30px;
 `
 export const StyledTextPromotion = styled.p`
 	font-family: ${({ theme }) => theme.fonts.alegreya};

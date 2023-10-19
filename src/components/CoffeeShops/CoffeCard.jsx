@@ -2,12 +2,12 @@ import React from 'react'
 import {  StyledCoffeeCard, StyledTextCard, StyledTitleCard } from './CoffeeShops.styled'
 import { Button } from '../Button/Button'
 
-export const CoffeCard = ({ title, desc, onClick }) => {
+export const CoffeCard = ({ title, desc, toggleModal }) => {
 	return (
 		<StyledCoffeeCard>
 			<StyledTitleCard>{title}</StyledTitleCard>
 			<StyledTextCard>{desc.slice(0, 200)}...</StyledTextCard>
-			<Button onClick={onClick}>Add to cart</Button>
+			<Button onClick={()=>toggleModal(title)}>Add to cart</Button>
 		</StyledCoffeeCard>
 	)
 }

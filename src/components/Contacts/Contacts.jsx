@@ -25,7 +25,7 @@ export const Contacts = () => {
 			<StyledAddress>
 				<StyledAddressTitle>Our address</StyledAddressTitle>
 				<StyledAddressText>13 Sichovykh Strilʹtsiv street</StyledAddressText>
-				<StyledAddressText>4310 Sichovykh Strilʹtsiv street</StyledAddressText>
+				<StyledAddressText>45 Sichovykh Strilʹtsiv street</StyledAddressText>
 				<StyledAddressButton>
 				<a href={`tel:${phoneNumber}`}>Contact Us</a></StyledAddressButton>
 			</StyledAddress>

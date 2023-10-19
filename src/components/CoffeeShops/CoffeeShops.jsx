@@ -10,12 +10,12 @@ import {FcNext, FcPrevious} from 'react-icons/fc'
 
 import { coffeeData } from '../../assets/coffeeData'
 import { CoffeCard } from './CoffeCard'
-import { CoffeeShopsMobile } from './CoffeeShopMobile'
+import { CoffeeShopsMobile } from './CoffeeShopsMobile'
 
 export const CoffeeShops = ({ toggleModal }) => {
 	const slides = coffeeData.map((coffee, id) => (
 		<SwiperSlide key={id}>
-			<CoffeCard onClick={toggleModal} title={coffee.title} desc={coffee.desc} />
+			<CoffeCard toggleModal={toggleModal} title={coffee.title} desc={coffee.desc} />
 		</SwiperSlide>
 	))
 	return (
@@ -25,7 +25,6 @@ export const CoffeeShops = ({ toggleModal }) => {
 			</MediaQuery>
 			<MediaQuery minWidth={1280}>
 				<SwiperContainer>
-
 					<FcPrevious className='prevSlide'/>
 				<FcNext className='nextSlide'/>
 				<StyledSwiper
@@ -40,7 +39,6 @@ export const CoffeeShops = ({ toggleModal }) => {
 						prevEl: '.prevSlide'
 					}}
 					modules={[Pagination, Navigation]}
-					// className='mySwiper'
 					>
 					{slides}
 				</StyledSwiper>

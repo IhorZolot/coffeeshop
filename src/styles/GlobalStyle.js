@@ -36,11 +36,18 @@ a {
 .swiper-pagination{
   transform: translateY(8px);
 }
-.prevSlide{
+.prevSlide {
   position: absolute;
   left: 10px;
   font-size: 2rem;
   z-index: 999;
-  top: 40%;
+  top: 45%;
+}
+.nextSlide {
+  position: absolute;
+  right: 10px;
+  font-size: 2rem;
+  z-index: 999;
+  top: 45%;
 }
 `
