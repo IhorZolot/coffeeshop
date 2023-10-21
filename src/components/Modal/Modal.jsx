@@ -1,32 +1,34 @@
 import { useEffect } from 'react'
 import { BackgroundModal, ContentModal, StyledModalCloseButton } from './Modal.styled'
 import { Sprite } from '/public/pictures/Sprite'
+import { useCart } from '../context/CartContext'
 
-export const Modal = ({ children, onClose }) => {
+export const Modal = ({ children }) => {
+	const { toggleModal } = useCart()
 	const onBackdropClick = event => {
 		if (event.target === event.currentTarget) {
-			onClose()
+			toggleModal()
 		}
 	}
 
 	useEffect(() => {
 		const handleKeyDown = event => {
 			if (event.key === 'Escape') {
-				onClose()
+				toggleModal()
 			}
 		}
 		document.addEventListener('keydown', handleKeyDown)
 		return () => {
 			document.removeEventListener('keydown', handleKeyDown)
 		}
-	}, [onClose])
+	}, [toggleModal])
 
 	return (
 		<BackgroundModal onClick={onBackdropClick}>
 			<ContentModal>
-			<StyledModalCloseButton onClick={onClose}>
-				<Sprite name={'windows-close'} />
-			</StyledModalCloseButton>
+				<StyledModalCloseButton onClick={toggleModal}>
+					<Sprite name={'windows-close'} />
+				</StyledModalCloseButton>
 				{children}
 			</ContentModal>
 		</BackgroundModal>

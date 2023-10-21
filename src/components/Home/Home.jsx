@@ -1,4 +1,4 @@
-import { BsInstagram, BsFacebook,BsTelegram } from 'react-icons/bs';
+import { BsInstagram, BsFacebook, BsTelegram } from 'react-icons/bs'
 import { Sprite } from '/public/pictures/Sprite'
 import {
 	StyledBoxGrinder,
@@ -14,23 +14,22 @@ import {
 } from './Home.styled'
 import { Button } from '../Button/Button'
 import { useEffect, useState } from 'react'
+import { Modal } from '../Modal/Modal'
+import { useCart } from '../context/CartContext'
 import { Menu } from '../Menu/Menu'
-import { useModal } from '../../hooks/useModal';
-import { Modal } from '../Modal/Modal';
 
 export const Home = () => {
-	const {isOpen, toggleModal} = useModal()
-	const [isMenuOpen, setIsMenuOpen] = useState(false)
-	
-	useEffect(()=> {
-		if(isMenuOpen){
-			document.body.style.overflow='hidden'
+	const { isOpen, toggleModal } = useCart()
+	const [isMenuOpen] = useState(false)
+
+	useEffect(() => {
+		if (isMenuOpen) {
+			document.body.style.overflow = 'hidden'
+		} else {
+			document.body.style.overflow = 'visible'
 		}
-		else {
-			document.body.style.overflow='visible'
-		}
-	},[isMenuOpen])
-	
+	}, [isMenuOpen])
+
 	return (
 		<StyledHome id='Home'>
 			<StyledLeftSide>
@@ -46,27 +45,27 @@ export const Home = () => {
 					<img src={'/pictures/coffee-grinder.svg'} alt='coffee-grinder' />
 				</StyledBoxGrinder>
 				<StyledBoxSocial>
-				<a href="https://www.instagram.com/your_instagram_profile">
-					<StyledSocialIcon>
-					<BsInstagram />
-					</StyledSocialIcon>
-    </a>
-				<a href="https://www.facebook.com/your_facebook_profile">
-				<StyledSocialIcon>
-      <BsFacebook />
-			</StyledSocialIcon>
-    </a>
-				<a href="https://t.me/your_telegram_channel">
-				<StyledSocialIcon>
-      <BsTelegram/>
-			</StyledSocialIcon>
-    </a>
+					<a href='https://www.instagram.com/your_instagram_profile'>
+						<StyledSocialIcon>
+							<BsInstagram />
+						</StyledSocialIcon>
+					</a>
+					<a href='https://www.facebook.com/your_facebook_profile'>
+						<StyledSocialIcon>
+							<BsFacebook />
+						</StyledSocialIcon>
+					</a>
+					<a href='https://t.me/your_telegram_channel'>
+						<StyledSocialIcon>
+							<BsTelegram />
+						</StyledSocialIcon>
+					</a>
 					<StyledSpanText>Follow us</StyledSpanText>
 				</StyledBoxSocial>
 			</StyledRightSide>
 			{isOpen && (
-				<Modal onClose={toggleModal}>
-					 <Menu />
+				<Modal>
+					<Menu />
 				</Modal>
 			)}
 		</StyledHome>

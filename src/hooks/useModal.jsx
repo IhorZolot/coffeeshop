@@ -7,9 +7,9 @@ export const useModal = () => {
 	const close = () => {
 		setIsOpen(false)
 	}
-	const toggleModal = (item) => {
+	const toggleModal = item => {
 		setIsOpen(prev => !prev)
 		setContent(item)
 	}
-	return { isOpen, toggleModal, close ,content}
+	return { isOpen, toggleModal, close, content }
 }

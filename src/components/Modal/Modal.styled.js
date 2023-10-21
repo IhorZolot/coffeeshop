@@ -12,15 +12,12 @@ export const BackgroundModal = styled.div`
 `
 export const ContentModal = styled.div`
 	width: 60vw;
-
-	background: #e0e0e0;
+	background: ${({ theme }) => theme.colors.sectionGreen};
 	border: none;
 	padding: 18px 16px;
-	border-radius: 4px;
-	/* cursor: pointer; */
+	border-radius: 15px;
 `
 export const StyledModalCloseButton = styled.div`
-	/* position: absolute; */
 	display: flex;
 	margin-bottom: 10px;
 	justify-content: end;

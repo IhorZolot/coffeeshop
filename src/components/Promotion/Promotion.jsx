@@ -9,11 +9,12 @@ import {
 } from './Promotion.styled'
 import { Button } from '../Button/Button'
 import { Modal } from '../Modal/Modal'
-import { useModal } from '../../hooks/useModal'
 import { CoffeePurchaseModal } from '../Modal/CoffeePurchaseModal/CoffeePurchaseModal'
+import { useCart } from '../context/CartContext'
 
 export const Promotion = () => {
-	const {isOpen, toggleModal} = useModal()
+	const { isOpen, toggleModal } = useCart()
+
 	return (
 		<StyledPromotion id='Promotion' $reverse>
 			<StyledSpanPromotion>Promotion</StyledSpanPromotion>
@@ -32,10 +33,10 @@ export const Promotion = () => {
 					Order now
 				</Button>
 				{isOpen && (
-				<Modal onClose={toggleModal}>
-					<CoffeePurchaseModal/>
-				</Modal>
-			)}
+					<Modal>
+						<CoffeePurchaseModal />
+					</Modal>
+				)}
 			</StyledTextBoxPromotion>
 		</StyledPromotion>
 	)

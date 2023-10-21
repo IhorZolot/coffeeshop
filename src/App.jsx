@@ -8,21 +8,21 @@ import { Modal } from './components/Modal/Modal'
 import { Promotion } from './components/Promotion/Promotion'
 import { useModal } from './hooks/useModal'
 import { CoffeePurchaseModal } from './components/Modal/CoffeePurchaseModal/CoffeePurchaseModal'
+import { useCart } from './components/context/CartContext'
 
 export default function App() {
-	const { isOpen, toggleModal, content, close } = useModal()
-	
+	const { isOpen } = useCart()
 	return (
 		<>
 			<Header />
 			<Home />
 			<AboutUs />
-			<Promotion toggleModal={toggleModal} />
-			<CoffeeShops toggleModal={toggleModal} />
+			<Promotion />
+			<CoffeeShops />
 			<Contacts />
 			{isOpen && (
-				<Modal onClose={toggleModal}>
-					<CoffeePurchaseModal close={close}  content={content} />
+				<Modal>
+					<CoffeePurchaseModal />
 				</Modal>
 			)}
 		</>

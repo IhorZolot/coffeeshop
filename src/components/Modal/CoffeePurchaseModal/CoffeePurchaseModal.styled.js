@@ -4,55 +4,50 @@ export const StyledModalCard = styled.div`
 	display: flex;
 	flex-direction: column;
 	padding: 20px;
-	//background-color: #E3EBE7;
 	background-color: inherit;
-	text-align: left;
-	border-radius: 10px;
-	//box-shadow: 0px 23px 34px 0px rgba(35, 57, 55, 0.17);
+`
+export const StyledModalTitle = styled.div`
+	font-family: ${({ theme }) => theme.fonts.josefine};
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 10px;
 `
 
-export const StyledCoffeeInfo = styled.h2`
-	margin-bottom: 20px;
+export const StyledCoffeeInfo = styled.h2``
+export const StyledCartlIcon = styled.div`
+	font-size: 28px;
+	color: ${({ theme }) => theme.colors.buttonGreen};
 `
-export const StyledTotalCard = styled.div`
-display: flex;
-flex-direction: column;
-text-align: left;
-gap: 15px;
-justify-content: space-between;
-		padding: 12px 20px;
-		margin-bottom: 30px;
-@media screen and (min-width: 1280px) {
+export const StyledTotalCard = styled.ul`
+	display: flex;
+	flex-direction: column;
+	text-align: left;
+
+	@media screen and (min-width: 1280px) {
+		justify-content: space-between;
 	}
 `
+export const StyledTotalCardLi = styled.li`
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+`
+
 export const StyledCoffeeName = styled.p`
 	font-size: 24px;
 	margin-bottom: 10px;
 `
 export const StyledLine = styled.div`
-  border-top: 2px solid ${({ theme }) => theme.colors.gray};
-  width: 100%; 
+	border-top: 0.5px solid ${({ theme }) => theme.colors.gray};
+	width: 100%;
 	margin-bottom: 15px;
-`;
+`
 export const StyledQuantity = styled.div`
-display: flex;
-gap: 15px;
-justify-content: right;
-`
-export const StyledTotalPrice = styled.div`
-display: flex;
-gap: 15px;
-justify-content: right;
-font-size: 20px;
-margin-bottom: 15px;
-margin-right: 30px;
-`
-export const StyledCashPrice = styled.div`
-display: flex;
-gap: 15px;
-text-align: right;
-align-items: center;
-justify-content: space-between;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
 `
 export const StyledCoffeeQuantity = styled.button`
 	background: none;
@@ -61,22 +56,34 @@ export const StyledCoffeeQuantity = styled.button`
 		font-size: 20px;
 		font-weight: bold;
 		color: ${({ theme }) => theme.colors.buttonGreen};
-	cursor: pointer;
+		cursor: pointer;
 	}
 `
-
-// export const StyledQuantityLabel = styled.div`
-// display: flex;
-// gap: 15px;
-// justify-content:space-between;
-// `
-// export const StyledCoffeePic = styled.div`
-// 	width: 16px;
-// 	height: 16px;
-// `
-// export const StyledCoffeePic2 = styled.div`
-// 	width: 10px;
-// 	height: 10px;
-// `
-
-
+export const StyledCashPrice = styled.div`
+	font-family: ${({ theme }) => theme.fonts.josefine};
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+	text-align: left;
+	& a {
+		font-size: 20px;
+		font-weight: bold;
+		color: ${({ theme }) => theme.colors.buttonGreen};
+		cursor: pointer;
+		&:hover {
+			color: #1a403d;
+		}
+	}
+	@media screen and (min-width: 1280px) {
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+	}
+`
+export const StyledTotalPrice = styled.div`
+	border: 1px solid;
+	border-radius: 15px;
+	padding: 15px;
+	padding-right: 50px;
+	text-align: left;
+`

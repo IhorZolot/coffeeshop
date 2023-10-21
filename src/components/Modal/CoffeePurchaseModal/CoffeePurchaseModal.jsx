@@ -1,38 +1,75 @@
 import React, { useState } from 'react'
-import { StyledCashPrice, StyledCoffeeInfo, StyledCoffeeName, StyledCoffeeQuantity, StyledLine, StyledModalCard, StyledQuantity,  StyledTotalCard,  StyledTotalPrice } from './CoffeePurchaseModal.styled'
+import { TiShoppingCart, TiTrash } from 'react-icons/ti'
+import {
+	StyledCartlIcon,
+	StyledCashPrice,
+	StyledCoffeeInfo,
+	StyledCoffeeName,
+	StyledCoffeeQuantity,
+	StyledLine,
+	StyledModalCard,
+	StyledModalTitle,
+	StyledQuantity,
+	StyledTotalCard,
+	StyledTotalCardLi,
+	StyledTotalPrice,
+} from './CoffeePurchaseModal.styled'
 import { Button } from '../../Button/Button'
+import { useCart } from '../../context/CartContext'
 
-export const CoffeePurchaseModal = ({content, close}) => {
-	const [quantity, setQuantity] = useState(0)
+export const CoffeePurchaseModal = () => {
+	const { cart, close } = useCart()
+	const [quantities, setQuantities] = useState([])
 
-	const handleIncQuantity = () => {
-		setQuantity(quantity + 1)
+	const handleIncQuantity = index => {
+		const newQuantities = [...quantities]
+		newQuantities[index] += 1
+		setQuantities(newQuantities)
 	}
-	const handleDecQuantity = () => {
-		if (quantity > 0) {
-			setQuantity(quantity - 1)
+
+	const handleDecQuantity = index => {
+		if (quantities[index] > 0) {
+			const newQuantities = [...quantities]
+			newQuantities[index] -= 1
+			setQuantities(newQuantities)
 		}
 	}
 	return (
 		<StyledModalCard>
-			<StyledCoffeeInfo>Ваше Замовлення</StyledCoffeeInfo>
+			<StyledModalTitle>
+				<StyledCoffeeInfo>Кава</StyledCoffeeInfo>
+				<StyledCartlIcon>
+					<TiShoppingCart />
+				</StyledCartlIcon>
+			</StyledModalTitle>
 			<StyledLine />
 			<StyledTotalCard>
-			<StyledCoffeeName>Назва напою : {content}</StyledCoffeeName>
-			<StyledQuantity>
-				<StyledCoffeeQuantity onClick={handleDecQuantity}><span>-</span></StyledCoffeeQuantity>
-				<h3>{quantity}</h3>
-				<StyledCoffeeQuantity onClick={handleIncQuantity}><span>+</span></StyledCoffeeQuantity>
-			</StyledQuantity>
-			<StyledLine />
-				<StyledTotalPrice>Загалом: {quantity}</StyledTotalPrice>
+				{cart.map((coffee, id) => (
+					<StyledTotalCardLi key={id}>
+						<StyledCoffeeName> {coffee.title}</StyledCoffeeName>
+						<StyledQuantity>
+							<StyledCoffeeQuantity onClick={() => handleDecQuantity(id)}>
+								<span>-</span>
+							</StyledCoffeeQuantity>
+							<h3>{quantities[id]}</h3>
+							<StyledCoffeeQuantity onClick={() => handleIncQuantity(id)}>
+								<span>+</span>
+							</StyledCoffeeQuantity>
+						</StyledQuantity>
+						<>
+							<TiTrash />
+						</>
+					</StyledTotalCardLi>
+				))}
 			</StyledTotalCard>
+			<StyledLine />
 			<StyledCashPrice>
-			<a href="#shop" onClick={close} className="menu-link active-link">Продовжити</a>
+				<a href='#shop' onClick={close}>
+					Додати каву
+				</a>
+				<StyledTotalPrice>Вартість напоів: грн</StyledTotalPrice>
 				<Button>Замовити</Button>
 			</StyledCashPrice>
 		</StyledModalCard>
 	)
 }
-
-
