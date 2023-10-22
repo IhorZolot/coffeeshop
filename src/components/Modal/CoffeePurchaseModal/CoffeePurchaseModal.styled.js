@@ -18,7 +18,10 @@ export const StyledCoffeeInfo = styled.h2`
 	color: ${({ theme }) => theme.colors.gray};
 `
 export const StyledCartlIcon = styled.div`
-	font-size: 28px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 20px;
 	color: ${({ theme }) => theme.colors.gray};
 `
 
@@ -32,15 +35,27 @@ export const StyledTotalCard = styled.ul`
 	}
 `
 export const StyledTotalCardLi = styled.li`
+	font-family: ${({ theme }) => theme.fonts.josefine};
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 	justify-content: space-between;
 `
+export const StyledQuantityBox = styled.li`
+	display: flex;
+	width: 120px;
+	align-items: center;
+	justify-content: space-between;
+	@media screen and (min-width: 1280px) {
+		width: 300px;
+	}
+`
+
 export const StyledCoffeeName = styled.p`
 	font-size: 24px;
 	margin-bottom: 10px;
 `
+
 export const StyledLine = styled.div`
 	border-top: 0.5px solid ${({ theme }) => theme.colors.gray};
 	width: 100%;
@@ -54,11 +69,12 @@ export const StyledQuantity = styled.div`
 export const StyledCoffeeQuantity = styled.button`
 	background: none;
 	border: none;
+
 	& span {
-		font-size: 20px;
-		font-weight: bold;
+		font-size: 30px;
 		color: #af9283;
 		cursor: pointer;
+		padding: 0 5px;
 	}
 `
 export const StyledCashPrice = styled.div`
@@ -67,8 +83,14 @@ export const StyledCashPrice = styled.div`
 	flex-direction: column;
 	gap: 15px;
 	text-align: left;
+
 	& a {
-		font-size: 20px;
+		border: 1px solid #af9283;
+		border-radius: 6px;
+		padding: 14px;
+		width: 200px;
+		font-family: ${({ theme }) => theme.fonts.josefine};
+		font-size: 18px;
 		font-weight: bold;
 		color: ${({ theme }) => theme.colors.buttonGreen};
 		cursor: pointer;
@@ -84,9 +106,9 @@ export const StyledCashPrice = styled.div`
 `
 export const StyledTotalPrice = styled.div`
 	border: 1px solid #af9283;
-	border-radius: 15px;
+	border-radius: 6px;
 	padding: 15px;
-	padding-right: 50px;
 	text-align: left;
 	color: #af9283;
+	width: 200px;
 `

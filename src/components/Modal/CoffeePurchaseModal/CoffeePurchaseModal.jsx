@@ -9,6 +9,7 @@ import {
 	StyledModalCard,
 	StyledModalTitle,
 	StyledQuantity,
+	StyledQuantityBox,
 	StyledTotalCard,
 	StyledTotalCardLi,
 	StyledTotalPrice,
@@ -23,9 +24,10 @@ export const CoffeePurchaseModal = () => {
 	return (
 		<StyledModalCard>
 			<StyledModalTitle>
-				<StyledCoffeeInfo>Кава</StyledCoffeeInfo>
+				<StyledCoffeeInfo>Coffee</StyledCoffeeInfo>
 				<StyledCartlIcon>
 					{totalCoffeeCounter}
+					{''}
 					<TiShoppingCart />
 				</StyledCartlIcon>
 			</StyledModalTitle>
@@ -34,7 +36,7 @@ export const CoffeePurchaseModal = () => {
 				{cart.map(coffee => (
 					<StyledTotalCardLi key={coffee.id}>
 						<StyledCoffeeName> {coffee.title}</StyledCoffeeName>
-						<>
+						<StyledQuantityBox>
 							<StyledQuantity>
 								<StyledCoffeeQuantity onClick={() => handleDecQuantity(coffee.id)}>
 									<span>-</span>
@@ -46,17 +48,20 @@ export const CoffeePurchaseModal = () => {
 							</StyledQuantity>
 
 							<TiTrash onClick={() => deleteFromCart(coffee.id)} />
-						</>
+						</StyledQuantityBox>
 					</StyledTotalCardLi>
 				))}
 			</StyledTotalCard>
-
+			<StyledLine />
 			<StyledCashPrice>
 				<a href='#shop' onClick={close}>
-					Додати каву
+					Add Coffee
 				</a>
-				<StyledTotalPrice>Вартість напоів: {totalCoffeePrice}грн</StyledTotalPrice>
-				<Button>Замовити</Button>
+				<StyledTotalPrice>
+					Total price: {totalCoffeePrice}
+					grn
+				</StyledTotalPrice>
+				<Button>Buy</Button>
 			</StyledCashPrice>
 		</StyledModalCard>
 	)

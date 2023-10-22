@@ -4,24 +4,24 @@ import { Sprite } from '/public/pictures/Sprite'
 import { useCart } from '../../context/CartContext'
 
 export const Modal = ({ children }) => {
-	const { toggleModal } = useCart()
+	const { toggleModal, close } = useCart()
 	const onBackdropClick = event => {
 		if (event.target === event.currentTarget) {
-			toggleModal()
+			close()
 		}
 	}
 
 	useEffect(() => {
 		const handleKeyDown = event => {
 			if (event.key === 'Escape') {
-				toggleModal()
+				close()
 			}
 		}
 		document.addEventListener('keydown', handleKeyDown)
 		return () => {
 			document.removeEventListener('keydown', handleKeyDown)
 		}
-	}, [toggleModal])
+	}, [close])
 
 	return (
 		<BackgroundModal onClick={onBackdropClick}>

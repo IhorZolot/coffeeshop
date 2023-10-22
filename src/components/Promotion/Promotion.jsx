@@ -29,8 +29,8 @@ export const Promotion = () => {
 					should not be confused. n the second case, this refers not to diluted espresso, but to a drink prepared
 					through a filter system.
 				</StyledTextPromotion>
-				<Button $hideable onClick={() => toggleModal({ type: 'purchase' })}>
-					Order now
+				<Button $hideable onClick={() => toggleModal({ type: 'menu' })}>
+					See now
 				</Button>
 				{isOpen && typeOfModal === 'purchase' && (
 					<Modal>
