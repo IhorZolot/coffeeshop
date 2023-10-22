@@ -11,7 +11,7 @@ export const BackgroundModal = styled.div`
 	z-index: 9999;
 `
 export const ContentModal = styled.div`
-	width: 60vw;
+	width: 90vw;
 	background: ${({ theme }) => theme.colors.sectionCreamy};
 	border: none;
 	padding: 18px 16px;
