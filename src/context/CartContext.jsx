@@ -1,10 +1,9 @@
 import React, { createContext, useContext, useState } from 'react'
 import { useModal } from '../hooks/useModal'
-import { coffeeData } from '../assets/coffeeData'
 export const CartContext = createContext()
 
 export const CartProvider = ({ children }) => {
-	const { isOpen, toggleModal, content, close, typeOfModal } = useModal()
+	const { isOpen, toggleModal, close, typeOfModal } = useModal()
 	const [cart, setCart] = useState([])
 
 	const addToCart = coffee => {
