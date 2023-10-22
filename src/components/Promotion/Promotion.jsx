@@ -10,10 +10,10 @@ import {
 import { Button } from '../Button/Button'
 import { Modal } from '../Modal/Modal'
 import { CoffeePurchaseModal } from '../Modal/CoffeePurchaseModal/CoffeePurchaseModal'
-import { useCart } from '../context/CartContext'
+import { useCart } from '../../context/CartContext'
 
 export const Promotion = () => {
-	const { isOpen, toggleModal } = useCart()
+	const { isOpen, toggleModal, typeOfModal } = useCart()
 
 	return (
 		<StyledPromotion id='Promotion' $reverse>
@@ -29,10 +29,10 @@ export const Promotion = () => {
 					should not be confused. n the second case, this refers not to diluted espresso, but to a drink prepared
 					through a filter system.
 				</StyledTextPromotion>
-				<Button $hideable onClick={toggleModal}>
+				<Button $hideable onClick={() => toggleModal({ type: 'purchase' })}>
 					Order now
 				</Button>
-				{isOpen && (
+				{isOpen && typeOfModal === 'purchase' && (
 					<Modal>
 						<CoffeePurchaseModal />
 					</Modal>

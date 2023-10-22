@@ -15,7 +15,7 @@ import { coffeeData } from '../../assets/coffeeData'
 export const CoffeeShops = () => {
 	const slides = coffeeData.map((coffee, id) => (
 		<SwiperSlide key={id}>
-			<CoffeCard title={coffee.title} desc={coffee.desc} />
+			<CoffeCard product={coffee} />
 		</SwiperSlide>
 	))
 	return (

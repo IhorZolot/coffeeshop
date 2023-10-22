@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import { BackgroundModal, ContentModal, StyledModalCloseButton } from './Modal.styled'
 import { Sprite } from '/public/pictures/Sprite'
-import { useCart } from '../context/CartContext'
+import { useCart } from '../../context/CartContext'
 
 export const Modal = ({ children }) => {
 	const { toggleModal } = useCart()

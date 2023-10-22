@@ -12,7 +12,7 @@ export const BackgroundModal = styled.div`
 `
 export const ContentModal = styled.div`
 	width: 60vw;
-	background: ${({ theme }) => theme.colors.sectionGreen};
+	background: ${({ theme }) => theme.colors.sectionCreamy};
 	border: none;
 	padding: 18px 16px;
 	border-radius: 15px;

@@ -6,12 +6,11 @@ import { Header } from './components/Header/Header'
 import { Home } from './components/Home/Home'
 import { Modal } from './components/Modal/Modal'
 import { Promotion } from './components/Promotion/Promotion'
-import { useModal } from './hooks/useModal'
 import { CoffeePurchaseModal } from './components/Modal/CoffeePurchaseModal/CoffeePurchaseModal'
-import { useCart } from './components/context/CartContext'
+import { useCart } from './context/CartContext'
 
 export default function App() {
-	const { isOpen } = useCart()
+	const { isOpen, typeOfModal } = useCart()
 	return (
 		<>
 			<Header />
@@ -20,7 +19,7 @@ export default function App() {
 			<Promotion />
 			<CoffeeShops />
 			<Contacts />
-			{isOpen && (
+			{isOpen && typeOfModal === 'purchase' && (
 				<Modal>
 					<CoffeePurchaseModal />
 				</Modal>

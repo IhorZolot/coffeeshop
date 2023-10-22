@@ -9,6 +9,7 @@ export const theme = {
 		sectionGreen: '#c1ddd6',
 		ligthGreen: '#e3eBe7',
 		sectionCreamy: '#fae9e0',
+
 		gray: '#444a4a',
 		black: '#000000',
 		white: '#ffffff',

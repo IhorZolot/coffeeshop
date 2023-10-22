@@ -1,4 +1,3 @@
-import React, { useState } from 'react'
 import { TiShoppingCart, TiTrash } from 'react-icons/ti'
 import {
 	StyledCartlIcon,
@@ -15,59 +14,48 @@ import {
 	StyledTotalPrice,
 } from './CoffeePurchaseModal.styled'
 import { Button } from '../../Button/Button'
-import { useCart } from '../../context/CartContext'
+import { useCart } from '../../../context/CartContext'
 
 export const CoffeePurchaseModal = () => {
-	const { cart, close } = useCart()
-	const [quantities, setQuantities] = useState([])
+	const { cart, close, handleDecQuantity, handleIncQuantity, totalCoffeeCounter, deleteFromCart, totalCoffeePrice } =
+		useCart()
 
-	const handleIncQuantity = index => {
-		const newQuantities = [...quantities]
-		newQuantities[index] += 1
-		setQuantities(newQuantities)
-	}
-
-	const handleDecQuantity = index => {
-		if (quantities[index] > 0) {
-			const newQuantities = [...quantities]
-			newQuantities[index] -= 1
-			setQuantities(newQuantities)
-		}
-	}
 	return (
 		<StyledModalCard>
 			<StyledModalTitle>
 				<StyledCoffeeInfo>Кава</StyledCoffeeInfo>
 				<StyledCartlIcon>
+					{totalCoffeeCounter}
 					<TiShoppingCart />
 				</StyledCartlIcon>
 			</StyledModalTitle>
 			<StyledLine />
 			<StyledTotalCard>
-				{cart.map((coffee, id) => (
-					<StyledTotalCardLi key={id}>
+				{cart.map(coffee => (
+					<StyledTotalCardLi key={coffee.id}>
 						<StyledCoffeeName> {coffee.title}</StyledCoffeeName>
-						<StyledQuantity>
-							<StyledCoffeeQuantity onClick={() => handleDecQuantity(id)}>
-								<span>-</span>
-							</StyledCoffeeQuantity>
-							<h3>{quantities[id]}</h3>
-							<StyledCoffeeQuantity onClick={() => handleIncQuantity(id)}>
-								<span>+</span>
-							</StyledCoffeeQuantity>
-						</StyledQuantity>
 						<>
-							<TiTrash />
+							<StyledQuantity>
+								<StyledCoffeeQuantity onClick={() => handleDecQuantity(coffee.id)}>
+									<span>-</span>
+								</StyledCoffeeQuantity>
+								<h3>{coffee.count}</h3>
+								<StyledCoffeeQuantity onClick={() => handleIncQuantity(coffee.id)}>
+									<span>+</span>
+								</StyledCoffeeQuantity>
+							</StyledQuantity>
+
+							<TiTrash onClick={() => deleteFromCart(coffee.id)} />
 						</>
 					</StyledTotalCardLi>
 				))}
 			</StyledTotalCard>
-			<StyledLine />
+
 			<StyledCashPrice>
 				<a href='#shop' onClick={close}>
 					Додати каву
 				</a>
-				<StyledTotalPrice>Вартість напоів: грн</StyledTotalPrice>
+				<StyledTotalPrice>Вартість напоів: {totalCoffeePrice}грн</StyledTotalPrice>
 				<Button>Замовити</Button>
 			</StyledCashPrice>
 		</StyledModalCard>

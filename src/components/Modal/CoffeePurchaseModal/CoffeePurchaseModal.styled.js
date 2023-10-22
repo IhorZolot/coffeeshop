@@ -14,11 +14,14 @@ export const StyledModalTitle = styled.div`
 	margin-bottom: 10px;
 `
 
-export const StyledCoffeeInfo = styled.h2``
+export const StyledCoffeeInfo = styled.h2`
+	color: ${({ theme }) => theme.colors.gray};
+`
 export const StyledCartlIcon = styled.div`
 	font-size: 28px;
-	color: ${({ theme }) => theme.colors.buttonGreen};
+	color: ${({ theme }) => theme.colors.gray};
 `
+
 export const StyledTotalCard = styled.ul`
 	display: flex;
 	flex-direction: column;
@@ -34,7 +37,6 @@ export const StyledTotalCardLi = styled.li`
 	align-items: center;
 	justify-content: space-between;
 `
-
 export const StyledCoffeeName = styled.p`
 	font-size: 24px;
 	margin-bottom: 10px;
@@ -55,7 +57,7 @@ export const StyledCoffeeQuantity = styled.button`
 	& span {
 		font-size: 20px;
 		font-weight: bold;
-		color: ${({ theme }) => theme.colors.buttonGreen};
+		color: #af9283;
 		cursor: pointer;
 	}
 `
@@ -81,9 +83,10 @@ export const StyledCashPrice = styled.div`
 	}
 `
 export const StyledTotalPrice = styled.div`
-	border: 1px solid;
+	border: 1px solid #af9283;
 	border-radius: 15px;
 	padding: 15px;
 	padding-right: 50px;
 	text-align: left;
+	color: #af9283;
 `

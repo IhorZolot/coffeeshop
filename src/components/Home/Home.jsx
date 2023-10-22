@@ -15,11 +15,11 @@ import {
 import { Button } from '../Button/Button'
 import { useEffect, useState } from 'react'
 import { Modal } from '../Modal/Modal'
-import { useCart } from '../context/CartContext'
+import { useCart } from '../../context/CartContext'
 import { Menu } from '../Menu/Menu'
 
 export const Home = () => {
-	const { isOpen, toggleModal } = useCart()
+	const { isOpen, toggleModal, typeOfModal } = useCart()
 	const [isMenuOpen] = useState(false)
 
 	useEffect(() => {
@@ -35,7 +35,7 @@ export const Home = () => {
 			<StyledLeftSide>
 				<StyledTitleH3>Drink coffee, enjoy with Mova</StyledTitleH3>
 				<StyledTitleH1>Coffee Shop</StyledTitleH1>
-				<Button onClick={toggleModal}>Menu</Button>
+				<Button onClick={() => toggleModal({ type: 'menu' })}>Menu</Button>
 			</StyledLeftSide>
 			<StyledRightSide>
 				<StyledDecorLine>
@@ -63,7 +63,7 @@ export const Home = () => {
 					<StyledSpanText>Follow us</StyledSpanText>
 				</StyledBoxSocial>
 			</StyledRightSide>
-			{isOpen && (
+			{isOpen && typeOfModal === 'menu' && (
 				<Modal>
 					<Menu />
 				</Modal>
